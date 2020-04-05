@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #ededed;
+}
+.app-wrap {
+  min-width: 1220px;
+}
+.top-header {
+  width: 100%;
+  height: 45px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222325),
+    color-stop(#3b3c3f),
+    to(#222325)
+  );
+  background-image: linear-gradient(90deg, #222325, #3b3c3f, #222325);
+}
+.topbar-logo {
+  float: left;
+  margin: 12px 0 0 20px;
+  background: url(../img/logo.png) no-repeat 50%;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+}
+.top-aside-right {
+  float: right;
+  margin-right: 18px;
+  width: 72px;
+  /* background: skyblue; */
+}
+.top-aside-right .aside-icon-user {
+  float: left;
+  /* background: orangered; */
+  width: 36px;
+  height: 45px;
+  position: relative;
+  display: block;
+  /* background: red; */
+}
+.top-aside-right .aside-icon-shop {
+  float: right;
+  width: 36px;
+  height: 45px;
+  position: relative;
+  /* background: orange; */
+}
+.position-header {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  margin-left: -8px;
+  margin-top: -12px;
+  background: url(../img/avatar-and-cart.c2634628.png) 50% no-repeat;
+  background-position: 1px 2px;
+  background-size: 180%;
+}
+.top-aside-right .aside-icon-shop .position-header {
+  background-position: 0px -17px;
+}
+.top-aside-right .aside-icon-shop .shop-list {
+  position: absolute;
+  right: 4px;
+  top: 45px;
+  background: white;
+  border-radius: 8px;
+  opacity: 0;
+}
+.top-aside-right .aside-icon-shop .shop-list .lists-container {
+  width: 360px;
+  height: 314px;
+  padding-top: 180px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url(../img/shopcar.png);
+  background-position: top 95px center;
+  background-repeat: no-repeat;
+  /* visibility: hidden; */
+}
+.show-list {
+  opacity: 1;
+  transition: all 0.2s;
+}
