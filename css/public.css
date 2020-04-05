@@ -89,3 +89,15 @@ body {
   opacity: 1;
   transition: all 0.2s;
 }
+
+.desc {
+  font-size: 18px;
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+}
+.desc-prompt {
+  color: #bcbcbc;
+  font-size: 12px;
+  text-align: center;
+}
