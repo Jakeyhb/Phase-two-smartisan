@@ -89,11 +89,12 @@ img {
 }
 
 .hot-list-duct {
+  float: left;
   border-right: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
   border-radius: initial;
   background: #fff;
-  width: 304.5px;
+  width: 303px;
   height: 100%;
 }
 
