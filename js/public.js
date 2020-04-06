@@ -36,20 +36,3 @@ $(function () {
     });
   })
 })
-
-
-// $(".position-header").mouseout(function () {
-//   clearInterval(hide_timer);
-//   hide_timer = setInterval(function () {
-//     $(".shop-list").css({
-//       opacity: 0,
-//     }), 1000
-//   })
-// })
-
-
-// $(".lists-container").mousemove(function () {
-//   $(".shop-list").css({
-//     opacity: 1,
-//   });
-// })
