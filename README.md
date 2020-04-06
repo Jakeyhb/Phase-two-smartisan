@@ -17,3 +17,12 @@ Two-phase-Project smartisan t.tt
 ## banner 图
 
 ![image](https://upload-images.jianshu.io/upload_images/11168645-b3c4cfb1e13b31cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+## 广告位置是图片
+
+直接布局图片就行
+
+## 热门产品
+
+获取接口进行渲染
+![image](./img/hotlistproduct.png)
