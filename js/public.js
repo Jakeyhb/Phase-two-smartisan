@@ -31,9 +31,13 @@ $(function () {
   })
 
   $(".shop-list").mouseout(function () {
-    $(".shop-list").css({
-      opacity: 0,
-    });
+    clearInterval(hide_timer);
+    hide_timer = setInterval(function () {
+      $(".shop-list").css({
+        opacity: 0,
+      });
+    }, 100)
+
   })
 })
 

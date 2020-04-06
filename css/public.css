@@ -88,12 +88,14 @@ a {
   background-position: 0px -17px;
 }
 .top-aside-right .aside-icon-shop .shop-list {
+  z-index: 99999;
   position: absolute;
   right: 4px;
   top: 45px;
   background: white;
-  border-radius: 8px;
+  border-radius: 13px;
   opacity: 0;
+  border: 1px solid #ddd;
 }
 .top-aside-right .aside-icon-shop .shop-list .lists-container {
   width: 360px;
@@ -104,6 +106,7 @@ a {
   background-image: url(../img/shopcar.png);
   background-position: top 95px center;
   background-repeat: no-repeat;
+
   /* visibility: hidden; */
 }
 .show-list {
