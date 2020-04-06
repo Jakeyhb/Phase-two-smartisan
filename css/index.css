@@ -30,3 +30,34 @@ img {
 .swiper-wrapper {
   transition-timing-function: ease-out;
 }
+/* adv */
+
+.adv-lists {
+  /* background: orange; */
+  width: 1220px;
+  height: 198px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.advlistimg img {
+  float: left;
+  width: 304.5px;
+  height: 100%;
+
+  border-radius: 6px;
+}
+
+.common-normal-box {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  margin-top: 25px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.1);
+}
