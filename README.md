@@ -6,6 +6,10 @@ Two-phase-Project smartisan t.tt
 
 ![image-20200406182500439](./img/image-20200406182500439.png)
 
+### 购物车弹出
+
+![image](./img/20200406222317.png)
+
 ## 商城 title 部分
 
 ![image-20200406182528891](.//img/image-20200406182528891.png)
