@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "goods_id": 2269975899,
+      "goods_name": "坚果 Pro 3",
+      "short_name": "高通骁龙™ 855Plus · 4800 万模范四摄 · Smartisan OS 7.0",
+      "image_url": "https://resource.smartisan.com/resource/f195e666e089d4e3775ce67d8e9523ce.png?x-oss-process=image/resize,w_324/format,webp",
+      "nowsales": 2399,
+      "befsales": 2899
+    },
+    {
+      "goods_id": 22699758,
+      "goods_name": "smartisan  颈挂蓝牙耳机",
+      "short_name": "“圈铁一体代表作”",
+      "image_url": "https://resource.smartisan.com/resource/d159521e479b26f3c97a1e4f00a5aefd.jpg?x-oss-process=image/resize,w_324/format,webp",
+      "nowsales": 199,
+      "befsales": 0
+    },
+    {
+      "goods_id": 2269,
+      "goods_name": "GoBiggeR 便携式触屏显示器 ZB133TF-W ",
+      "short_name": "TNT平板显示器",
+      "image_url": "https://resource.smartisan.com/resource/2d5bac538fef9800aa5cd8420cfcdc12.jpg?x-oss-process=image/resize,w_324/format,webp",
+      "nowsales": 1449,
+      "befsales": 0
+    },
+    {
+      "goods_id": 2269975899,
+      "goods_name": "坚果快充移动电源 20000mAh（45W MAX)",
+      "short_name": "“充电狂人的大满足”",
+      "image_url": "https://resource.smartisan.com/resource/de1274f4c70fe3768417bb0454320089.png?x-oss-process=image/resize,w_324/format,webp",
+      "nowsales": 249,
+      "befsales": 0
+    }
+  ]
+}
