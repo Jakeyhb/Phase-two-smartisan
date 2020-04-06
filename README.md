@@ -1,14 +1,15 @@
 # jakeby
-Two-phase-Project  smartisan t.tt
+
+Two-phase-Project smartisan t.tt
 
 ## 主页顶部公共部分
 
-![image-20200406182500439](C:\Users\一心一梦\AppData\Roaming\Typora\typora-user-images\image-20200406182500439.png)
+![image-20200406182500439](./img/image-20200406182500439.png)
 
-## 商城title部分
+## 商城 title 部分
 
-![image-20200406182528891](C:\Users\一心一梦\AppData\Roaming\Typora\typora-user-images\image-20200406182528891.png)
+![image-20200406182528891](.//img/image-20200406182528891.png)
 
-## banner图
+## banner 图
 
-![image-20200406182556490](C:\Users\一心一梦\AppData\Roaming\Typora\typora-user-images\image-20200406182556490.png)
+![image-20200406182556490](./img/image-20200406182556490.png)
