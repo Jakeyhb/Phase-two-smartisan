@@ -36,7 +36,7 @@ $(function () {
       $(".shop-list").css({
         opacity: 0,
       });
-    }, 100)
+    }, 200)
 
   })
 })
