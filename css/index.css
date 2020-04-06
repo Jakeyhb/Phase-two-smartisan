@@ -13,6 +13,9 @@ img {
   width: 1220px;
   margin: 0 auto;
 }
+.artivle aside {
+  display: block;
+}
 .swiper-container {
   margin-top: 25px;
   width: 100%;
@@ -49,6 +52,8 @@ img {
 }
 
 .common-normal-box {
+  width: 1220px;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -60,4 +65,115 @@ img {
   background: #fff;
   -webkit-box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.1);
+}
+.common-normal-box .header {
+  height: 61px;
+  width: 100%;
+  display: block;
+  position: relative;
+  background: #fafafa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.common-normal-box .header h5 {
+  margin-left: 25px;
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 60px;
+  color: #666;
+}
+
+.hot-list {
+  width: 100%;
+  height: 429px;
+}
+
+.hot-list-duct {
+  border-right: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  border-radius: initial;
+  background: #fff;
+  width: 304.5px;
+  height: 100%;
+}
+
+.hot-list-duct .item-cover {
+  display: block;
+  margin: 0 auto;
+  padding: 45px 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hot-list-duct .item-cover img {
+  display: block;
+  width: 216px;
+  height: 216px;
+  margin: 0 auto;
+}
+
+.artivle h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 8px;
+  color: #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+}
+.artivle .txt-product-title {
+  padding: 15px 12px 0;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #999;
+  white-space: nowrap;
+  text-overflow: ellips;
+  overflow: hidden;
+}
+
+.item-attr-colors {
+  text-align: center;
+  margin-top: 15px;
+  height: 17px;
+}
+
+.item-attr-colors .outer {
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 5px;
+  padding: 2px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+}
+
+.active {
+  -webkit-box-shadow: inset 0 0 0 1px #b2b2b2;
+  box-shadow: inset 0 0 0 1px #b2b2b2;
+  border-color: #b2b2b2;
+}
+
+.item-price {
+  text-align: center;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #d44d44;
+  margin: 20px 0;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.orignal-price {
+  text-decoration: line-through;
+  padding-left: 10px;
+  font-weight: 400;
+  color: #ccc;
+  font-size: 12px;
 }
