@@ -13,7 +13,7 @@ img {
   width: 1220px;
   margin: 0 auto;
 }
-. .swiper-container {
+.swiper-container {
   margin-top: 25px;
   width: 100%;
 }
@@ -26,4 +26,7 @@ img {
   height: 499px;
   object-fit: cover;
   border-radius: 15px;
+}
+.swiper-wrapper {
+  transition-timing-function: ease-out;
 }
