@@ -24,5 +24,5 @@ Two-phase-Project smartisan t.tt
 
 ## 热门产品
 
-获取接口进行渲染
+获取接口进行渲染 如图所示
 ![image](./img/hotlistproduct.png)
