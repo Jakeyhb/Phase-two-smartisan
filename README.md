@@ -26,3 +26,5 @@ Two-phase-Project smartisan t.tt
 
 获取接口进行渲染 如图所示
 ![image](./img/hotlistproduct.png)
+
+## 服务器的后端的配置和代码更新
