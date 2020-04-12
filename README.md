@@ -27,4 +27,4 @@ Two-phase-Project smartisan t.tt
 获取接口进行渲染 如图所示
 ![image](https://img.500px.me/photo/9c7258027421693671d6afa031a966767/0ad7e0e2505c465fb695b448b4dd8049.jpg!p5)
 
-## 服务器的后端的配置和代码更新
+## 服务器的后端的配置和代码更新 node
