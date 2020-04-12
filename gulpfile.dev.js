@@ -20,59 +20,48 @@ let del = require("del");
 // let connect_options = {
 //     root: "./dist",
 //     port: 3000,
-//     // 自动刷新
-//     livereload: true,
-//     middleware: function () {
-//         // 返回值必须是数组;
-//         // 默认访问的路径 : http://localhost/pxx
-//         // 被处理之后的路径 : 代理路径/pxx;
-//         // 重写路径 : /pxx => ""; 代理路径
-//         return [
-//             proxy("/pxx", {
-//                 target: "https://apiv2.pinduoduo.com/api/gindex/subject/limited/goods",
-//                 changeOrigin: true,
-//                 pathRewrite: {
-//                     "/pxx": ""
-//                 }
-//             }),
-//             proxy("/dt", {
-//                 target: "https://www.duitang.com/napi/blog/list/by_filter_id/",
-//                 changeOrigin: true,
-//                 pathRewrite: {
-//                     "/dt": ""
-//                 }
-//             }),
-//             //  代理接口的代理名称千万不要和页面重名，重名之后会发生非常多的bug;
-//             proxy("/lg", {
-//                 target: "http://localhost/server/login-normal.php",
-//                 changeOrigin: true,
-//                 pathRewrite: {
-//                     "/lg": ""
-//                 }
-//             })
-//         ]
-//     }
 // }
+let connect_options = {
+    root: "./dist",
+    port: 3000,
+    // 自动刷新
+    livereload: true,
+    middleware: function () {
+        // 返回值必须是数组;
+        // 默认访问的路径 : http://localhost/pxx
+        // 被处理之后的路径 : 代理路径/pxx;
+        // 重写路径 : /pxx => ""; 代理路径
+        return [
+            proxy("/smartisan", {
+                target: "http://116.62.207.144:10000/mock/5dc0e805c9b21d000aa729b0/host_goods",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/smartisan": ""
+                }
+            })
+        ]
+    }
+}
 
 gulp.task("dele", async () => {
     await del(['./dist/**/*']);
 })
 // 依赖第三方模块;
 
-// gulp.task('connect', async () => {
-//     connect.server(connect_options);
-// });
+gulp.task('connect', async () => {
+    connect.server(connect_options);
+});
 
 
 gulp.task("html", async () => {
     // 刨除部分文件不做操作;
-    gulp.src(["./src/html/**/*.html", "!./src/html/**/header.html"]) // src 拿出index.html变成工作了流;
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file'
-        }))
+    gulp.src(["./src/html/**/*.html"]) // src 拿出index.html变成工作了流;
+        // .pipe(fileinclude({
+        //     prefix: '@@',
+        //     basepath: '@file'
+        // }))
         .pipe(gulp.dest("./dist/")) // 操作工作流 => 转存操作;
-        .pipe(connect.reload())
+    // .pipe(connect.reload())
 });
 
 gulp.task("javascript", async () => {
@@ -94,13 +83,21 @@ gulp.task("scss", async () => {
         .pipe(gulp.dest("./dist/css/"))
         .pipe(connect.reload())
 })
+gulp.task("img", async () => {
+    gulp.src(["./src/img/*.*"])
+        // 把scss源进行处理，编译成 css;
+
+        .pipe(gulp.dest("./dist/img/"))
+
+})
 
 gulp.task("watch", async () => {
     gulp.watch(["./src/html/**/*.html"], gulp.series("html"));
-    gulp.watch(["./src/js/*.js"], gulp.series("js"));
+    gulp.watch(["./src/js/*.js"], gulp.series("javascript"));
     gulp.watch(["./src/css/*.css"], gulp.series("css"));
     gulp.watch(["./src/scss/**/*.scss"], gulp.series("scss"));
 })
 
-gulp.task("dev", gulp.parallel("watch", gulp.series("dele", "html", "javascript", "css", "scss")));
+gulp.task("dev", gulp.parallel("watch", "connect", gulp.series("dele", "html", "javascript", "css", "scss", "img")));
+
 
