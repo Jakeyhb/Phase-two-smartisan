@@ -153,7 +153,7 @@ a {
   padding: 0 20px;
 }
 /* 鼠标移入的active */
-.tabs-item li.active {
+.tabs-item li .active {
   color: #e5e5e5;
   font-weight: 700;
 }

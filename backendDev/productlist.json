@@ -1,0 +1,66 @@
+{
+  "code": 0,
+  "data": {
+    "advimg": [
+      {
+        "advimg_url": "https://resource.smartisan.com/resource/c78046de769057344c00754cd69b4861.png?x-oss-process=image/resize,w_900/format,webp",
+        "lia_url": ""
+      }
+    ]
+  },
+
+  "list": {
+    "data": [
+      {
+        "goods_id": 2269975899,
+        "goods_name": "坚果 Pro 3",
+        "short_name": "高通骁龙™ 855Plus · 4800 万模范四摄 · Smartisan OS 7.0",
+        "image_url": "https://resource.smartisan.com/resource/f195e666e089d4e3775ce67d8e9523ce.png?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 2399,
+        "befsales": 2899
+      },
+      {
+        "goods_id": 22699758,
+        "goods_name": "坚果 Pro 3",
+        "short_name": "高通骁龙™ 855Plus · 4800 万模范四摄 · Smartisan OS 7.0",
+        "image_url": "https://resource.smartisan.com/resource/a4c73e549097c7f5cf2c5e0d87e56d13.png?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 3399,
+        "befsales": 3599
+      },
+
+      {
+        "goods_id": 22699758,
+        "goods_name": "坚果 Pro 3",
+        "short_name": "高通骁龙™ 855Plus · 4800 万模范四摄 · Smartisan OS 7.0",
+        "image_url": " https://resource.smartisan.com/resource/9934374dda26c292555dd1ec0887e17b.png?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 2699,
+        "befsales": 3199
+      },
+
+      {
+        "goods_id": 2269975899,
+        "goods_name": "坚果 弯头数据线（Type-C）",
+        "short_name": "“3A”大电流”",
+        "image_url": "https://resource.smartisan.com/resource/8e822aa7cbab24fec7eacf0bbb2f6526.jpg?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 24,
+        "befsales": 25
+      },
+      {
+        "goods_id": 22699758,
+        "goods_name": "smartisan  颈挂蓝牙耳机",
+        "short_name": "“圈铁一体代表作”",
+        "image_url": "https://resource.smartisan.com/resource/d159521e479b26f3c97a1e4f00a5aefd.jpg?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 199,
+        "befsales": 0
+      },
+      {
+        "goods_id": 2269975899,
+        "goods_name": "Smartisan 真无线蓝牙耳机",
+        "short_name": "智能配对 开盖即连",
+        "image_url": "https://resource.smartisan.com/resource/e991f946530a7cfab3d9670dd8b1371b.png?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 249,
+        "befsales": 249
+      }
+    ]
+  }
+}

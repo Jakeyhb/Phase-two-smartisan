@@ -27,16 +27,21 @@ let connect_options = {
     // 自动刷新
     livereload: true,
     middleware: function () {
-        // 返回值必须是数组;
-        // 默认访问的路径 : http://localhost/pxx
-        // 被处理之后的路径 : 代理路径/pxx;
-        // 重写路径 : /pxx => ""; 代理路径
+
         return [
             proxy("/smartisan", {
                 target: "http://116.62.207.144:10000/mock/5dc0e805c9b21d000aa729b0/host_goods",
                 changeOrigin: true,
                 pathRewrite: {
                     "/smartisan": ""
+                }
+            }),
+
+            proxy("/productlist", {
+                target: "http://116.62.207.144:10000/mock/5dc0e805c9b21d000aa729b0/productlist",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/productlist": ""
                 }
             })
         ]
@@ -56,12 +61,12 @@ gulp.task('connect', async () => {
 gulp.task("html", async () => {
     // 刨除部分文件不做操作;
     gulp.src(["./src/html/**/*.html"]) // src 拿出index.html变成工作了流;
-        // .pipe(fileinclude({
-        //     prefix: '@@',
-        //     basepath: '@file'
-        // }))
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
         .pipe(gulp.dest("./dist/")) // 操作工作流 => 转存操作;
-    // .pipe(connect.reload())
+        .pipe(connect.reload())
 });
 
 gulp.task("javascript", async () => {

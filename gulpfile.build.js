@@ -1,4 +1,3 @@
-
 let gulp = require("gulp");
 let babel = require('gulp-babel');
 let del = require("del");
@@ -8,11 +7,34 @@ let sourcemaps = require('gulp-sourcemaps');
 let rev = require("gulp-rev");
 let revCollector = require('gulp-rev-collector');
 let minifyHtml = require('gulp-minify-html');
+let proxy = require("http-proxy-middleware").createProxyMiddleware;
+let connect = require("gulp-connect");
 
+
+let connect_options = {
+    root: "./dist",
+    port: 3000,
+    // 自动刷新
+    livereload: true,
+    middleware: function () {
+
+        return [
+            proxy("/smartisan", {
+                target: "http://116.62.207.144:10000/mock/5dc0e805c9b21d000aa729b0/host_goods",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/smartisan": ""
+                }
+            })
+        ]
+    }
+}
 
 // 缓存处理方案 : rev => 给每个文件后面加上哈希值  rev-collector
 // html 链接处理工具 rev-collector;
-
+gulp.task('connect', async () => {
+    connect.server(connect_options);
+});
 // 没有经过处理的代码全部清空;
 gulp.task("dele", async () => {
     await del(['./dist/**/*']);
@@ -66,6 +88,13 @@ gulp.task("html", async () => {
         .pipe(minifyHtml())
         .pipe(gulp.dest("./dist/"))
 })
+gulp.task("img", async () => {
+    gulp.src(["./src/img/*.*"])
+        // 把scss源进行处理，编译成 css;
 
-gulp.task("build", gulp.series("dele", "javascript", "css", "html"));
+        .pipe(gulp.dest("./dist/img/"))
+
+})
+
+gulp.task("build", gulp.series("dele", "img", "connect", "javascript", "css", "html"));
 
