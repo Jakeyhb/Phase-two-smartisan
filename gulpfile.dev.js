@@ -29,19 +29,18 @@ let connect_options = {
     middleware: function () {
 
         return [
-            proxy("/smartisan", {
+            proxy("/shot_list", {
                 target: "http://116.62.207.144:10000/mock/5dc0e805c9b21d000aa729b0/host_goods",
                 changeOrigin: true,
                 pathRewrite: {
-                    "/smartisan": ""
+                    "/shot_list": ""
                 }
             }),
-
-            proxy("/productlist", {
+            proxy("/productlis", {
                 target: "http://116.62.207.144:10000/mock/5dc0e805c9b21d000aa729b0/productlist",
                 changeOrigin: true,
                 pathRewrite: {
-                    "/productlist": ""
+                    "/productlis": ""
                 }
             })
         ]

@@ -1,7 +1,52 @@
 {
   "code": 0,
   "data": {
+    "head": [
+      {
+        "title": "坚果Pro 3 及配件"
+      },
+      {
+        "title": "抖音文创"
+      },
+      {
+        "title": "足迹系列保护套"
+      },
+      {
+        "title": "服饰专场"
+      },
+      {
+        "title": "官方精选配件"
+      },
+      {
+        "title": "TNT触屏显示器"
+      },
+      {
+        "title": "扫地机器人"
+      },
+      {
+        "title": "畅呼吸系列产品"
+      },
+      {
+        "title": "打印机"
+      }
+    ],
     "advimg": [
+      {
+        "advimg_url": "https://resource.smartisan.com/resource/c78046de769057344c00754cd69b4861.png?x-oss-process=image/resize,w_900/format,webp",
+        "lia_url": ""
+      },
+      {
+        "advimg_url": "https://resource.smartisan.com/resource/c78046de769057344c00754cd69b4861.png?x-oss-process=image/resize,w_900/format,webp",
+        "lia_url": ""
+      },
+      {
+        "advimg_url": "https://resource.smartisan.com/resource/c78046de769057344c00754cd69b4861.png?x-oss-process=image/resize,w_900/format,webp",
+        "lia_url": ""
+      },
+      {
+        "advimg_url": "https://resource.smartisan.com/resource/c78046de769057344c00754cd69b4861.png?x-oss-process=image/resize,w_900/format,webp",
+        "lia_url": ""
+      },
       {
         "advimg_url": "https://resource.smartisan.com/resource/c78046de769057344c00754cd69b4861.png?x-oss-process=image/resize,w_900/format,webp",
         "lia_url": ""
@@ -10,7 +55,7 @@
   },
 
   "list": {
-    "data": [
+    "smphone": [
       {
         "goods_id": 2269975899,
         "goods_name": "坚果 Pro 3",

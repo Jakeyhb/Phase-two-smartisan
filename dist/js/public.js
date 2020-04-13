@@ -61,15 +61,18 @@ var swiper = new Swiper('.swiper-container', {
 
 // 渲染界面
 function load() {
+
   var options = {
-    url: "http://localhost:3000/smartisan",
+    url: "http://localhost:3000/shot_list",
     data: {
-      name: "goods"
+      "host_goods": ""
+
     },
     success: render,
     dataType: "json",
 
   }
+
   ajax(options)
 }
 function render(res) {
@@ -128,10 +131,8 @@ load();
 
 function productlist() {
   var options = {
-    url: "http://localhost:3000/productlist",
-    data: {
-      name: "productlist"
-    },
+    url: "http://localhost:3000/productlis",
+
     success: renderproductlist,
     dataType: "json",
 
@@ -141,7 +142,7 @@ function productlist() {
 function renderproductlist(res) {
   var data = res.data.advimg;
   var list = res.list.data;
-  console.log(data, list)
+  // console.log(data, list)
   var html = "";
   // console.log(data)
   data.forEach(function (item) {
@@ -190,7 +191,7 @@ function renderproductlist(res) {
         />
       </figure>
     </aside>
-    
+
     <article class="item-price">
       <span>￥${item.nowsales.toFixed(2)}</span>
       <span class="orignal-price">￥${item.befsales.toFixed(2)}</span>
