@@ -66,7 +66,8 @@ var swiper = new Swiper('.swiper-container', {
 function load() {
 
   var options = {
-    url: "http://localhost:3000/shot_list",
+    // http://303z9z3029.qicp.vip/
+    url: "http://303z9z3029.qicp.vip/shot_list",
 
     success: render,
     dataType: "json",
@@ -135,7 +136,8 @@ function render(res) {
 load();
 function productlist() {
   var options = {
-    url: "http://localhost:3000/productlis",
+    // http://303z9z3029.qicp.vip/
+    url: "http://303z9z3029.qicp.vip/productlis",
 
     success: renderproductlist,
     dataType: "json",
@@ -213,7 +215,8 @@ productlist();
 
 function dylist() {
   var options = {
-    url: "http://localhost:3000/dy",
+    // http://303z9z3029.qicp.vip/
+    url: "http://303z9z3029.qicp.vip/dy",
     success: dyproductlist,
     dataType: "json",
   }
