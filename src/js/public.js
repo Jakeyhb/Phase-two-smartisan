@@ -64,10 +64,7 @@ function load() {
 
   var options = {
     url: "http://localhost:3000/shot_list",
-    data: {
-      "host_goods": ""
 
-    },
     success: render,
     dataType: "json",
 
@@ -76,8 +73,11 @@ function load() {
   ajax(options)
 }
 function render(res) {
+  // console.log(res)
+
   var data = res.data;
-  console.log(data)
+  // console.log(data)
+
   var html = "";
   // console.log(data)
   data.forEach(function (item) {
@@ -157,7 +157,7 @@ function renderproductlist(res) {
   </div>`
   });
   list.forEach(function (item) {
-    console.log(item)
+    // console.log(item)
     html += `
   <div class="list-duct">
     <figure class="item-cover">
@@ -198,7 +198,7 @@ function renderproductlist(res) {
     </article>
   </div>`
   })
-  console.log(html)
+  // console.log(html)
   _("#prduct-list").innerHTML = html;
 }
 productlist();
