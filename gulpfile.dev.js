@@ -42,6 +42,22 @@ let connect_options = {
                 pathRewrite: {
                     "/productlis": ""
                 }
+            }),
+
+            proxy("/jgsc", {
+                target: "https://shopapi.smartisan.com/product/home",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/jgsc": ""
+                }
+            }),
+
+            proxy("/dy", {
+                target: "http://116.62.207.144:10000/mock/5dc0e805c9b21d000aa729b0/douyw",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/dy": ""
+                }
             })
         ]
     }

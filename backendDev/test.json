@@ -1,0 +1,63 @@
+{
+  "code": 0,
+  "data": {
+    "advimg": [
+      {
+        "advimg_url": "https://resource.smartisan.com/resource/69cf0cc6a3caf17aac0a51b0c0d7eb6a.png?x-oss-process=image/resize,w_600/format,webp",
+        "lia_url": "mock"
+      }
+    ]
+  },
+  "list": {
+    "data": [
+      {
+        "goods_id": 2269975899,
+        "goods_name": "抖音文创 可折叠多功能桌面手机支架",
+        "short_name": "防滑防摔满分",
+        "image_url": "https://resource.smartisan.com/resource/fe5d76598f129e012f1306b032f2a2a9.jpg?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 39,
+        "befsales": 0
+      },
+      {
+        "goods_id": 22699758,
+        "goods_name": "抖音文创 防滑鼠标垫",
+        "short_name": "加厚胶底 稳定抓地",
+        "image_url": "https://resource.smartisan.com/resource/385f2aba1f33834830d952f5b98d6573.jpg?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 19,
+        "befsales": 0
+      },
+      {
+        "goods_id": 22699758,
+        "goods_name": "抖音文创 Card Case 抖音力工卡挂件套装",
+        "short_name": "颠覆传统卡包设计",
+        "image_url": "https://resource.smartisan.com/resource/cc4795f2b5062e1ad5970e3a5fe43f63.png?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 69,
+        "befsales": 3199
+      },
+      {
+        "goods_id": 2269975899,
+        "goods_name": "抖音文创 黑漆镭射/磨砂珠光和纸胶带",
+        "short_name": "“易撕易粘 环保实用”",
+        "image_url": "https://resource.smartisan.com/resource/256c33729c5cfab68d4df6c7e9c24496.jpg?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 9.9,
+        "befsales": 25
+      },
+      {
+        "goods_id": 22699758,
+        "goods_name": "抖音文创 PVC软胶翻转式U盘挂件 16G",
+        "short_name": "USB 3.0 高速传输",
+        "image_url": "https://resource.smartisan.com/resource/473b6b76cb3bc8bf6bfef8f7b85d97cb.jpg?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 78,
+        "befsales": 0
+      },
+      {
+        "goods_id": 2269975899,
+        "goods_name": "抖音文创 指环手机支架",
+        "short_name": "强黏性薄胶，防滑防摔满分",
+        "image_url": "https://resource.smartisan.com/resource/ea72bed35470fb6f9be99036320ccf95.jpg?x-oss-process=image/resize,w_324/format,webp",
+        "nowsales": 19,
+        "befsales": 249
+      }
+    ]
+  }
+}
