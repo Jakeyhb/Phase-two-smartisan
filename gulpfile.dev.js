@@ -75,7 +75,7 @@ gulp.task('connect', async () => {
 
 gulp.task("html", async () => {
     // 刨除部分文件不做操作;
-    gulp.src(["./src/html/**/*.html"]) // src 拿出index.html变成工作了流;
+    gulp.src(["./src/html/**/index.html"]) // src 拿出index.html变成工作了流;
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'

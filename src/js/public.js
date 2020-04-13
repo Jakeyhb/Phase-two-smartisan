@@ -1,5 +1,6 @@
 // 下拉菜单和购物车
 $(function () {
+
   let hide_timer = null;
   var flag = true;
   $("#shoplist").mousemove(function () {
@@ -60,6 +61,8 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 // 渲染界面
+
+
 function load() {
 
   var options = {
@@ -78,6 +81,7 @@ function render(res) {
   // console.log(data)
 
   var html = "";
+
   // console.log(data)
   data.forEach(function (item) {
     // console.log(item)
@@ -85,7 +89,7 @@ function render(res) {
      <div class="hot-list-duct">
     <figure class="item-cover">
       <img
-        src="${item.image_url}"
+      data-original="${item.image_url}"
         lazy="loaded"
       />
     </figure>
@@ -99,18 +103,18 @@ function render(res) {
       <figure class="outer">
         <img
           data-v-380b3c68=""
-          src="https://resource.smartisan.com/resource/a95138cf41c70fbb689e0bcd785a362f.png?x-oss-process=image/resize,w_30/format,webp"
+          data-original="https://resource.smartisan.com/resource/a95138cf41c70fbb689e0bcd785a362f.png?x-oss-process=image/resize,w_30/format,webp"
         />
       </figure>
       <figure class="outer active">
         <img
-          src="https://resource.smartisan.com/resource/b86e1a8858c1445d3fd77a0dcba2eb5c.png?x-oss-process=image/resize,w_30/format,webp"
+        data-original="https://resource.smartisan.com/resource/b86e1a8858c1445d3fd77a0dcba2eb5c.png?x-oss-process=image/resize,w_30/format,webp"
         />
       </figure>
       <figure class="outer">
         <img
           data-v-380b3c68=""
-          src="https://resource.smartisan.com/resource/d0c2d694d76184aa8deabab5e8e951af.png?x-oss-process=image/resize,w_30/format,webp"
+          data-original="https://resource.smartisan.com/resource/d0c2d694d76184aa8deabab5e8e951af.png?x-oss-process=image/resize,w_30/format,webp"
         />
       </figure>
     </aside>
@@ -121,7 +125,12 @@ function render(res) {
     </article>
   </div>`
   })
+
   _("#hot-list").innerHTML = html;
+  $("#hot-list img").lazyload({
+    placeholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC",
+    effect: "fadeIn"
+  });
 }
 load();
 function productlist() {
@@ -145,7 +154,7 @@ function renderproductlist(res) {
     html += `
     <div class="advertise-img">
     <img
-      src="${item.advimg_url}"
+    data-original="${item.advimg_url}"
       alt=""
     />
   </div>`
@@ -156,7 +165,7 @@ function renderproductlist(res) {
   <div class="list-duct">
     <figure class="item-cover">
       <img
-        src="${item.image_url}"
+      data-original="${item.image_url}"
         lazy="loaded"
       />
     </figure>
@@ -170,18 +179,18 @@ function renderproductlist(res) {
       <figure class="outer">
         <img
           data-v-380b3c68=""
-          src="https://resource.smartisan.com/resource/a95138cf41c70fbb689e0bcd785a362f.png?x-oss-process=image/resize,w_30/format,webp"
+          data-original="https://resource.smartisan.com/resource/a95138cf41c70fbb689e0bcd785a362f.png?x-oss-process=image/resize,w_30/format,webp"
         />
       </figure>
       <figure class="outer active">
         <img
-          src="https://resource.smartisan.com/resource/b86e1a8858c1445d3fd77a0dcba2eb5c.png?x-oss-process=image/resize,w_30/format,webp"
+        data-original="https://resource.smartisan.com/resource/b86e1a8858c1445d3fd77a0dcba2eb5c.png?x-oss-process=image/resize,w_30/format,webp"
         />
       </figure>
       <figure class="outer">
         <img
           data-v-380b3c68=""
-          src="https://resource.smartisan.com/resource/d0c2d694d76184aa8deabab5e8e951af.png?x-oss-process=image/resize,w_30/format,webp"
+          data-original="https://resource.smartisan.com/resource/d0c2d694d76184aa8deabab5e8e951af.png?x-oss-process=image/resize,w_30/format,webp"
         />
       </figure>
     </aside>
@@ -191,8 +200,13 @@ function renderproductlist(res) {
     </article>
   </div>`
   })
+
   // console.log(html)
   _("#prduct-list").innerHTML = html;
+  $("#prduct-list img").lazyload({
+    placeholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC",
+    effect: "fadeIn"
+  });
 }
 productlist();
 
@@ -206,10 +220,10 @@ function dylist() {
   ajax(options)
 }
 function dyproductlist(res) {
-  console.log(res)
+  // console.log(res)
   var data = res.data.advimg;
   var list = res.list.data;
-  console.log(data, list)
+  // console.log(data, list)
   var html = "";
   // console.log(data)
   data.forEach(function (item) {
@@ -218,7 +232,7 @@ function dyproductlist(res) {
     html += `
     <div class="advertise-img">
     <img
-      src="${item.advimg_url}"
+    data-original="${item.advimg_url}"
       alt=""
     />
   </div>`
@@ -229,7 +243,7 @@ function dyproductlist(res) {
   <div class="list-duct">
     <figure class="item-cover">
       <img
-        src="${item.image_url}"
+      data-original="${item.image_url}"
         lazy="loaded"
       />
     </figure>
@@ -247,10 +261,23 @@ function dyproductlist(res) {
     </article>
   </div>`
   })
-  console.log(html)
+  // console.log(html)
+
   _("#dyduct-list").innerHTML = html;
+  $("#dyduct-list img").lazyload({
+    placeholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC",
+    effect: "fadeIn"
+  });
+
 }
 dylist();
+
+
+// $(" img").lazyload({
+//   placeholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC",
+//   effect: "fadeIn"
+// });
+
 
 
 
