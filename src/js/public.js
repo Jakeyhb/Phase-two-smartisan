@@ -96,7 +96,7 @@ $(".nav-sub-container").mouseleave(function () {
 function loadnav() {
   var options = {
     // http://303z9z3029.qicp.vip/
-    url: "http://localhost:3000/secon_nav",
+    url: "http://303z9z3029.qicp.vip/secon_nav",
     success: rendernav,
     dataType: "json",
   };
@@ -203,7 +203,7 @@ function load() {
 
   var options = {
     // http://303z9z3029.qicp.vip/
-    url: "http://localhost:3000/shot_list",
+    url: "http://303z9z3029.qicp.vip/shot_list",
 
     success: render,
     dataType: "json",
@@ -273,7 +273,7 @@ load();
 function productlist() {
   var options = {
     // http://303z9z3029.qicp.vip/
-    url: "http://localhost:3000/productlis",
+    url: "http://303z9z3029.qicp.vip/productlis",
 
     success: renderproductlist,
     dataType: "json",
@@ -351,7 +351,7 @@ productlist();
 function dylist() {
   var options = {
     // http://303z9z3029.qicp.vip/
-    url: "http://localhost:3000/dy",
+    url: "http://303z9z3029.qicp.vip/dy",
     success: dyproductlist,
     dataType: "json",
   }
