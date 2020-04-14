@@ -14,7 +14,7 @@ $(function () {
   })
   //定时器
   $("#shoplist").mouseleave(function () {
-    flag = true;
+    // flag = true;
     clearTimeout(hide_timer);
     hide_timer = setTimeout(() => {
       $(".shop-list").removeClass("show-list")

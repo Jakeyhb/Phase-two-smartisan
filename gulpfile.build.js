@@ -63,8 +63,11 @@ gulp.task("css", async () => {
     gulp.src(["./src/css/*.css"])
         // sourcemaps 索引初始化;
         .pipe(sourcemaps.init())
+        .pipe(cssnano({ zindex: false }))
         // 压缩
-        .pipe(cssnano())
+
+
+        //添加了配置  导致压缩之后改写z-index的问题
         // sourcemaps 写入
         // 加上 sourcemaps.write(".")独立产生一个sourcemaps文件;
         // sourcemaps.write() 什么都不加就是base64码直接写在了文件之中;
@@ -91,9 +94,7 @@ gulp.task("html", async () => {
 gulp.task("img", async () => {
     gulp.src(["./src/img/*.*"])
         // 把scss源进行处理，编译成 css;
-
         .pipe(gulp.dest("./dist/img/"))
-
 })
 
 gulp.task("build", gulp.series("dele", "img", "javascript", "css", "html"));

@@ -1,7 +1,8 @@
 {
-  "bootstrap.css": "bootstrap-8d687b1824.css",
-  "index.css": "index-8385169cc0.css",
+  "bootstrap.css": "bootstrap-05a40858bf.css",
+  "index.css": "index-632046346c.css",
   "indextest.css": "indextest-ad5d14db91.css",
-  "public.css": "public-d081ee4300.css",
+  "phone.css": "phone-693e4db2c1.css",
+  "public.css": "public-601f4aeebd.css",
   "swiper.min.css": "swiper-645fe567c3.min.css"
 }
