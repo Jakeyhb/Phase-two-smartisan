@@ -67,7 +67,7 @@ function load() {
 
   var options = {
     // http://303z9z3029.qicp.vip/
-    url: "http://303z9z3029.qicp.vip/shot_list",
+    url: "http://localhost:3000/shot_list",
 
     success: render,
     dataType: "json",
@@ -137,7 +137,7 @@ load();
 function productlist() {
   var options = {
     // http://303z9z3029.qicp.vip/
-    url: "http://303z9z3029.qicp.vip/productlis",
+    url: "http://localhost:3000/productlis",
 
     success: renderproductlist,
     dataType: "json",
@@ -212,11 +212,10 @@ function renderproductlist(res) {
 }
 productlist();
 
-
 function dylist() {
   var options = {
     // http://303z9z3029.qicp.vip/
-    url: "http://303z9z3029.qicp.vip/dy",
+    url: "http://localhost:3000/dy",
     success: dyproductlist,
     dataType: "json",
   }
@@ -280,6 +279,75 @@ dylist();
 //   placeholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC",
 //   effect: "fadeIn"
 // });
+
+
+// 下拉列表
+var str2 = $("#itemli").html();
+var html1 = "";
+var html2 = "";
+let timeout;
+$("#navli").mousemove(function (e) {
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    loadnav();
+    $(".category-wrapper").append(html1);
+    $("#sub").removeClass("sub-panel-wrapper-hide");
+    $("#sub").addClass("sub-panel-wrapper-show");
+  }, 200);
+});
+$("#navli").mouseleave(function (e) {
+  clearTimeout(timeout);
+  $("#sub").removeClass("sub-panel-wrapper-show");
+  $("#sub").addClass("sub-panel-wrapper-hide");
+  $(".category-wrapper").remove();
+  // timeout = null;
+  // console.log(timeout);
+});
+function loadnav() {
+  var options = {
+    // http://303z9z3029.qicp.vip/
+    url: "http://localhost/secon_nav",
+    success: rendernav,
+    dataType: "json",
+  };
+  ajax(options);
+}
+function rendernav(res) {
+  // console.log(res)
+  res.forEach(function (item, index) {
+    // console.log(item)
+    // console.log(str2)
+    if (item.name === str2) {
+      item.list.forEach(function (item, index) {
+        //  console.log(item.sub)
+        item.sub.forEach(function (item) {
+          html2 += `<li class="category-item">
+                           <a
+                              data-url="https://www.smartisan.com/category/297?type=shop"
+                              class="link"
+                            >
+                           <img
+                             src="${item.image}"
+                             class="picture"
+                           />
+                           <span class="sub-title">${item.name}</span></a>
+                         </li>`
+        })
+        html1 += ` 
+               <li class="item">
+                 <div class="container">
+                   <div class="title">${item.title}</div>
+                    <ul class="category-container" style="width: 202px;">
+                    ${html2}
+                     </ul>
+                    </div>
+                 </li>
+              `
+      });
+    }
+  });
+  console.log(html1)
+}
 
 
 

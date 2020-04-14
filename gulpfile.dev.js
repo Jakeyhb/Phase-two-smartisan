@@ -58,6 +58,14 @@ let connect_options = {
                 pathRewrite: {
                     "/dy": ""
                 }
+            }),
+            
+            proxy("/secon_nav", {
+                target: "https://shopapi.smartisan.com/v1/cms/second_nav",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/second_nav": ""
+                }
             })
         ]
     }

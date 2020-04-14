@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=../css/index-7573a53d7c.css><link rel=stylesheet href=../css/public-11f38968be.css></head><body><ul><li class=itemli><a id=itemli>畅呼吸</a></li></ul><div class=title-wrapper><div class=sub-panel-wrapper-hide id=sub><div class=nav-sub-container><ul class=category-wrapper><li class=item><div class=container><div class=title>生活电器</div><ul class=category-container style="width: 202px;"><li class=category-item><a data-url="https://www.smartisan.com/category/297?type=shop" class=link><img src=https://resource.smartisan.com/resource/71432ad30288fb860a4389881069b874.png class=picture> <span class=sub-title>空气净化器</span></a></li><li class=category-item><a data-url="https://www.smartisan.com/category/297?type=shop" class=link><img src=https://resource.smartisan.com/resource/4d83d72c5ecc288e8d5ddd9d06b80f99.jpg class=picture> <span class=sub-title>生活电器配件</span></a></li><li class=category-item><a data-url="https://www.smartisan.com/category/297?type=shop" class=link><img src=https://resource.smartisan.com/resource/8d58e1ea15e893647cb789478cb86627.jpg class=picture> <span class=sub-title>温/湿度计</span></a></li></ul></div></li></ul></div></div></div></body><script src=https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js></script><script src=../js/utils-4a48789407.js></script><script>
+
+
+  var str2 = $("#itemli").html();
+
+   var html1 = "";
+   var html2 = "";
+
+       let timeout;
+    $(".itemli").mousemove(function (e) {
+      clearTimeout(timeout);
+      
+      timeout = setTimeout(() => {
+        //  load();
+        $(".category-wrapper").append(html1);
+        $("#sub").removeClass("sub-panel-wrapper-hide");
+        $("#sub").addClass("sub-panel-wrapper-show");
+      }, 500);
+      
+    });
+
+
+    $(".itemli").mouseleave(function (e) {
+      clearTimeout(timeout);
+      $("#sub").removeClass("sub-panel-wrapper-show");
+      $("#sub").addClass("sub-panel-wrapper-hide");
+      //  $(".category-wrapper").remove();
+      // timeout = null;
+      // console.log(timeout);
+    });
+
+    //重置计时器的函数
+
+    //绑定事件：每次鼠标移动时，就会执行debounce返回的reTimer函数
+  // console.log(str2)
+function load() {
+      var options = {
+        // http://303z9z3029.qicp.vip/
+        url: "http://localhost/secon_nav",
+        success: render,
+        dataType: "json",
+      };
+    ajax(options);
+}
+function render(res) {
+      // console.log(res)
+      res.forEach(function (item ,index) {
+        // console.log(item)
+        // console.log(str2)
+        if(item.name === str2 ){
+          item.list.forEach(function (item ,index) {
+            //  console.log(item.sub)
+          item.sub.forEach(function(item){
+            // console.log(item)
+
+             html2 += `
+                         <li class="category-item">
+                           <a
+                              data-url="https://www.smartisan.com/category/297?type=shop"
+                              class="link"
+                            >
+                           <img
+                             src="${item.image}"
+                             class="picture"
+                           />
+                           <span class="sub-title">${item.name}</span></a>
+                         </li>
+                      `
+          })    
+              html1 +=` 
+               <li class="item">
+                 <div class="container">
+                   <div class="title">${item.title}</div>
+                    <ul class="category-container" style="width: 202px;">
+                    ${html2}
+                     </ul>
+                    </div>
+                 </li>
+              `
+          
+          });
+         
+         
+         
+
+        }
+      });
+       console.log(html1)
+   
+    }
+    
+    
+   
+
+   
+  </script></html>
