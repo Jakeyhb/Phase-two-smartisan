@@ -459,10 +459,10 @@ img {
   height: 0;
 }
 .title-wrapperseconednav .sub-panel-wrapper-show {
-  height: 300px;
+  height: 266px;
 }
 .title-wrapperseconednav .sub-panel-wrapper-hide,
-.title-wrapperseconednav.sub-panel-wrapper-show {
+.title-wrapperseconednav .sub-panel-wrapper-show {
   width: 100%;
   left: 0;
   top: 75px;

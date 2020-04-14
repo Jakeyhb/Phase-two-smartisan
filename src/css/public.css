@@ -109,7 +109,7 @@ a {
 
   /* visibility: hidden; */
 }
-.show-list {
+.top-aside-right .aside-icon-shop .show-list {
   opacity: 1;
   transition: all 0.2s;
 }

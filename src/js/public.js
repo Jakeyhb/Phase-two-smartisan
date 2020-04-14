@@ -1,31 +1,24 @@
 // 下拉菜单和购物车
 $(function () {
-
   let hide_timer = null;
-  var flag = true;
-  $("#shoplist").mousemove(function () {
 
-    flag = false;
-    $(".shop-list").css({
-      opacity: 1,
-    });
-    $(this).css({
-      cursor: "pointer"
-    })
+  $("#shoplist").mousemove(function () {
+    clearTimeout(hide_timer);
+    hide_timer = setTimeout(() => {
+      $(".shop-list").addClass("show-list")
+      $(this).css({
+        cursor: "pointer"
+      })
+    }, 200)
 
   })
   //定时器
-  $("#shoplist").mouseout(function () {
+  $("#shoplist").mouseleave(function () {
     flag = true;
-    clearInterval(hide_timer);
-    // $(".shop-list").css({
-    //   opacity: 0,
-    // });
-    hide_timer = setInterval(function () {
-      $(".shop-list").css({
-        opacity: 0,
-      });
-    }, 100)
+    clearTimeout(hide_timer);
+    hide_timer = setTimeout(() => {
+      $(".shop-list").removeClass("show-list")
+    }, 200)
   })
   $(".shop-list").mousemove(function () {
     clearTimeout(hide_timer);
@@ -33,34 +26,38 @@ $(function () {
 
   $(".shop-list").mouseout(function () {
     clearInterval(hide_timer);
-    hide_timer = setInterval(function () {
-      $(".shop-list").css({
-        opacity: 0,
-      });
+    hide_timer = setInterval(() => {
+      $(".shop-list").removeClass("show-list")
     }, 200)
 
   })
 })
-var str2;
+var str2 = "首页";
+var html = "";
 var html1 = "";
 var html2 = "";
 let timeout;
+let timeout2;
 
-
+// 鼠标移入事件
+// 进行防抖处理
+// 数据的渲染
 $("#navli").mousemove(function (e) {
   var target = e.srcElement || e.target;
   // console.log(str2)
   clearTimeout(timeout);
+  // clearTimeout(timeout);
+  //先让页面变干净更好的渲染
+
   timeout = setTimeout(() => {
-    var str2 = $(target).html();
-    console.log(str2)
+    $(".category-wrapper").children().remove();
+    // loadnav()
     $("#navli").removeClass("active");
-    loadnav();
-    
-    $(".category-wrapper").append(html1);
+    // 对元素进行添加和移除class
     $("#sub").removeClass("sub-panel-wrapper-hide");
+    $(".category-wrapper").html(html);
     $("#sub").addClass("sub-panel-wrapper-show");
-    $(target).addClass("active");
+    // $(target).addClass("active");
   }, 200);
 });
 
@@ -69,11 +66,30 @@ $("#navli").mousemove(function (e) {
 $("#navli").mouseleave(function (e) {
   var target = e.srcElement || e.target;
   clearTimeout(timeout);
-  $("#sub").removeClass("sub-panel-wrapper-show");
-  $("#sub").addClass("sub-panel-wrapper-hide");
-  $(target).removeClass("active");
+  clearTimeout(timeout2);
+  timeout2 = setTimeout(() => {
+    $("#sub").removeClass("sub-panel-wrapper-show");
+    $("#sub").addClass("sub-panel-wrapper-hide");
+
+  }, 500)
+  // $(target).removeClass("active");
+
   // $(".category-wrapper").remove();
 });
+
+$(".nav-sub-container").mousemove(function () {
+  clearTimeout(timeout2);
+})
+
+
+$(".nav-sub-container").mouseleave(function () {
+  clearTimeout(timeout2);
+  clearTimeout(timeout);
+  $("#sub").removeClass("sub-panel-wrapper-show");
+  $("#sub").addClass("sub-panel-wrapper-hide");
+  // $(target).removeClass("active");
+
+})
 
 
 
@@ -88,40 +104,80 @@ function loadnav() {
 }
 function rendernav(res) {
   // console.log(res)
-  res.forEach(function (item, index) {
+  res.forEach(function (item) {
     // console.log(item)
     // console.log(str2)
-    if (item.name === str2) {
-      item.list.forEach(function (item, index) {
-        //  console.log(item.sub)
+    if (item.name === str2 && item.list.length === 1) {
+      console.log(item.list.length);
+      // console.log(item.length);
+      item.list.forEach(function (item) {
         item.sub.forEach(function (item) {
+          // console.log(item)
           html2 += `<li class="category-item">
-                           <a
-                              data-url="https://www.smartisan.com/category/297?type=shop"
-                              class="link"
-                            >
-                           <img
-                             src="${item.image}"
-                             class="picture"
-                           />
-                           <span class="sub-title">${item.name}</span></a>
-                         </li>`
-        })
-        html1 += ` 
-               <li class="item">
-                 <div class="container">
-                   <div class="title">${item.title}</div>
-                    <ul class="category-container" style="width: 202px;">
-                    ${html2}
-                     </ul>
-                    </div>
-                 </li>
-              `
+                       <a
+                          data-url="https://www.smartisan.com/category/297?type=shop"
+                          class="link"
+                        >
+                       <img
+                         src="${item.image}"
+                         class="picture"
+                       />
+                       <span class="sub-title">${item.name}</span></a>
+                     </li>
+                  `;
+        });
+        // console.log(item.length);
+        html1 += `
+         
+           <li class="item">
+             <div class="container">
+               <div class="title">${item.title}</div>
+                <ul class="category-container" style="width: 202px;">
+                ${html2}
+                 </ul>
+                </div>
+             </li>
+             
+          `;
+      });
+    }
+    if (item.name === str2 && item.list.length > 1) {
+      let lisize = item.list.length;
+      item.list.forEach(function (item) {
+        item.sub.forEach(function (item) {
+          html2 += `
+          <li  class="category-item">
+            <a
+              data-url=""
+              class="link"
+              ><img src="${item.image}"
+                class="picture"
+              /><span  class="sub-title"
+                >${item.name}</span
+              ></a>
+          </li> `;
+        });
+        // console.log(item);
+        html1 += `
+        <li class="item">
+          <div class="container">
+            <div class="title">
+              ${item.title}
+            </div>
+            <ul class="category-container" style="width: 202px;">
+            ${html2}
+            </ul>
+          </div>
+        </li>`;
+        html += html1;
+        html1 = "";
+        html2 = "";
       });
     }
   });
-  console.log(html1)
+  // console.log(html)
 }
+loadnav();
 //banner
 var swiper = new Swiper('.swiper-container', {
   spaceBetween: 30,
