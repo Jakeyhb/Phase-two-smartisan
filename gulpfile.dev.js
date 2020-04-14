@@ -64,7 +64,7 @@ let connect_options = {
                 target: "https://shopapi.smartisan.com/v1/cms/second_nav",
                 changeOrigin: true,
                 pathRewrite: {
-                    "/second_nav": ""
+                    "/secon_nav": ""
                 }
             })
         ]

@@ -5,129 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/public.css" />
   </head>
   <body>
     <ul>
-      <li class="itemli"><a href="" id ="itemli">畅呼吸</a></li>
+      <li class="itemli"><a href="" id="itemli">首页</a></li>
     </ul>
-    <div class="title-wrapper">
+    <div class="title-wrapperseconednav">
       <div class="sub-panel-wrapper-hide" id="sub">
         <div class="nav-sub-container">
           <ul class="category-wrapper">
-           <li class="item">
-                 <div class="container">
-                   <div class="title">生活电器</div>
-                    <ul class="category-container" style="width: 202px;">
-                    
-                         <li class="category-item">
-                           <a
-                              data-url="https://www.smartisan.com/category/297?type=shop"
-                              class="link"
-                            >
-                           <img
-                             src="https://resource.smartisan.com/resource/71432ad30288fb860a4389881069b874.png"
-                             class="picture"
-                           />
-                           <span class="sub-title">空气净化器</span></a>
-                         </li>
-                      
-                         <li class="category-item">
-                           <a
-                              data-url="https://www.smartisan.com/category/297?type=shop"
-                              class="link"
-                            >
-                           <img
-                             src="https://resource.smartisan.com/resource/4d83d72c5ecc288e8d5ddd9d06b80f99.jpg"
-                             class="picture"
-                           />
-                           <span class="sub-title">生活电器配件</span></a>
-                         </li>
-                      
-                         <li class="category-item">
-                           <a
-                              data-url="https://www.smartisan.com/category/297?type=shop"
-                              class="link"
-                            >
-                           <img
-                             src="https://resource.smartisan.com/resource/8d58e1ea15e893647cb789478cb86627.jpg"
-                             class="picture"
-                           />
-                           <span class="sub-title">温/湿度计</span></a>
-                         </li>
-                      
-                     </ul>
-                    </div>
-                 </li>
-                 
+            <li class="item">
+              <div class="container">
+                <div class="title">
+                  手机
+                </div>
+                <ul class="category-container" style="width: 202px;">
+                  <li data-v-6da5beb4="" class="category-item">
+                    <a
+                      data-v-6da5beb4=""
+                      data-url="https://www.smartisan.com/category/210?type=product"
+                      class="link"
+                      ><img
+                        data-v-6da5beb4=""
+                        src="https://resource.smartisan.com/resource/a4c73e549097c7f5cf2c5e0d87e56d13.png?x-oss-process=image/resize,w_60/format,webp"
+                        class="picture"
+                      /><span data-v-6da5beb4="" class="sub-title"
+                        >手机</span
+                      ></a
+                    >
+                  </li>
                 </ul>
               </div>
             </li>
           </ul>
-         
         </div>
       </div>
     </div>
   </body>
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
   <script src="../js/utils.js"></script>
-   <script>
+  <script>
+    var str2 = $("#itemli").html();
+    console.log(str2);
 
+    var html1 = "";
+    var html = "";
+    var html2 = "";
+    let timeout;
 
-  var str2 = $("#itemli").html();
-
-   var html1 = "";
-   var html2 = "";
-
-       let timeout;
     $(".itemli").mousemove(function (e) {
       clearTimeout(timeout);
-      
+
       timeout = setTimeout(() => {
-        //  load();
-        $(".category-wrapper").append(html1);
+        $(".category-wrapper").html(html);
         $("#sub").removeClass("sub-panel-wrapper-hide");
         $("#sub").addClass("sub-panel-wrapper-show");
       }, 500);
-      
     });
-
 
     $(".itemli").mouseleave(function (e) {
       clearTimeout(timeout);
       $("#sub").removeClass("sub-panel-wrapper-show");
       $("#sub").addClass("sub-panel-wrapper-hide");
-      //  $(".category-wrapper").remove();
+      // $(".category-wrapper").children().remove();
       // timeout = null;
       // console.log(timeout);
     });
 
-    //重置计时器的函数
-
-    //绑定事件：每次鼠标移动时，就会执行debounce返回的reTimer函数
-  // console.log(str2)
-function load() {
+    function load() {
       var options = {
         // http://303z9z3029.qicp.vip/
         url: "http://localhost/secon_nav",
         success: render,
         dataType: "json",
       };
-    ajax(options);
-}
-function render(res) {
-      // console.log(res)
-      res.forEach(function (item ,index) {
-        // console.log(item)
-        // console.log(str2)
-        if(item.name === str2 ){
-          item.list.forEach(function (item ,index) {
-            //  console.log(item.sub)
-          item.sub.forEach(function(item){
-            // console.log(item)
+      ajax(options);
+    }
 
-             html2 += `
-                         <li class="category-item">
+    function render(res) {
+      res.forEach(function (item, index) {
+        // console.log(item.list.length);
+        if (item.name === str2 && item.list.length === 1) {
+          item.list.forEach(function (item, index) {
+            item.sub.forEach(function (item) {
+              // console.log(item)
+              html2 += `<li class="category-item">
                            <a
                               data-url="https://www.smartisan.com/category/297?type=shop"
                               class="link"
@@ -138,9 +101,9 @@ function render(res) {
                            />
                            <span class="sub-title">${item.name}</span></a>
                          </li>
-                      `
-          })    
-              html1 +=` 
+                      `;
+            });
+            html1 += `
                <li class="item">
                  <div class="container">
                    <div class="title">${item.title}</div>
@@ -149,22 +112,47 @@ function render(res) {
                      </ul>
                     </div>
                  </li>
-              `
-          
+              `;
           });
-         
-         
-         
-
+        }
+        if (item.name === str2 && item.list.length > 1) {
+          item.list.forEach(function (item) {
+            item.sub.forEach(function (item) {
+              // console.log(item);
+              html2 += `
+              <li  class="category-item">
+                <a
+                  data-url=""
+                  class="link"
+                  ><img src="${item.image}"
+                    class="picture"
+                  /><span  class="sub-title"
+                    >${item.name}</span
+                  ></a>
+              </li>
+                      `;
+            });
+            console.log(item);
+            html1 += `
+            <li class="item">
+              <div class="container">
+                <div class="title">
+                  ${item.title}
+                </div>
+                <ul class="category-container" style="width: 202px;">
+                ${html2}
+                </ul>
+              </div>
+            </li>`;
+            html += html1;
+            html1 = "";
+            html2 = "";
+          });
         }
       });
-       console.log(html1)
-   
-    }
-    
-    
-   
 
-   
+      console.log(html);
+    }
+    load();
   </script>
 </html>

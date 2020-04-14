@@ -41,7 +41,87 @@ $(function () {
 
   })
 })
+var str2;
+var html1 = "";
+var html2 = "";
+let timeout;
 
+
+$("#navli").mousemove(function (e) {
+  var target = e.srcElement || e.target;
+  // console.log(str2)
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    var str2 = $(target).html();
+    console.log(str2)
+    $("#navli").removeClass("active");
+    loadnav();
+    
+    $(".category-wrapper").append(html1);
+    $("#sub").removeClass("sub-panel-wrapper-hide");
+    $("#sub").addClass("sub-panel-wrapper-show");
+    $(target).addClass("active");
+  }, 200);
+});
+
+
+
+$("#navli").mouseleave(function (e) {
+  var target = e.srcElement || e.target;
+  clearTimeout(timeout);
+  $("#sub").removeClass("sub-panel-wrapper-show");
+  $("#sub").addClass("sub-panel-wrapper-hide");
+  $(target).removeClass("active");
+  // $(".category-wrapper").remove();
+});
+
+
+
+function loadnav() {
+  var options = {
+    // http://303z9z3029.qicp.vip/
+    url: "http://localhost:3000/secon_nav",
+    success: rendernav,
+    dataType: "json",
+  };
+  ajax(options);
+}
+function rendernav(res) {
+  // console.log(res)
+  res.forEach(function (item, index) {
+    // console.log(item)
+    // console.log(str2)
+    if (item.name === str2) {
+      item.list.forEach(function (item, index) {
+        //  console.log(item.sub)
+        item.sub.forEach(function (item) {
+          html2 += `<li class="category-item">
+                           <a
+                              data-url="https://www.smartisan.com/category/297?type=shop"
+                              class="link"
+                            >
+                           <img
+                             src="${item.image}"
+                             class="picture"
+                           />
+                           <span class="sub-title">${item.name}</span></a>
+                         </li>`
+        })
+        html1 += ` 
+               <li class="item">
+                 <div class="container">
+                   <div class="title">${item.title}</div>
+                    <ul class="category-container" style="width: 202px;">
+                    ${html2}
+                     </ul>
+                    </div>
+                 </li>
+              `
+      });
+    }
+  });
+  console.log(html1)
+}
 //banner
 var swiper = new Swiper('.swiper-container', {
   spaceBetween: 30,
@@ -282,74 +362,3 @@ dylist();
 
 
 // 下拉列表
-var str2 = $("#itemli").html();
-var html1 = "";
-var html2 = "";
-let timeout;
-$("#navli").mousemove(function (e) {
-  clearTimeout(timeout);
-  timeout = setTimeout(() => {
-    loadnav();
-    $(".category-wrapper").append(html1);
-    $("#sub").removeClass("sub-panel-wrapper-hide");
-    $("#sub").addClass("sub-panel-wrapper-show");
-  }, 200);
-});
-$("#navli").mouseleave(function (e) {
-  clearTimeout(timeout);
-  $("#sub").removeClass("sub-panel-wrapper-show");
-  $("#sub").addClass("sub-panel-wrapper-hide");
-  $(".category-wrapper").remove();
-  // timeout = null;
-  // console.log(timeout);
-});
-function loadnav() {
-  var options = {
-    // http://303z9z3029.qicp.vip/
-    url: "http://localhost/secon_nav",
-    success: rendernav,
-    dataType: "json",
-  };
-  ajax(options);
-}
-function rendernav(res) {
-  // console.log(res)
-  res.forEach(function (item, index) {
-    // console.log(item)
-    // console.log(str2)
-    if (item.name === str2) {
-      item.list.forEach(function (item, index) {
-        //  console.log(item.sub)
-        item.sub.forEach(function (item) {
-          html2 += `<li class="category-item">
-                           <a
-                              data-url="https://www.smartisan.com/category/297?type=shop"
-                              class="link"
-                            >
-                           <img
-                             src="${item.image}"
-                             class="picture"
-                           />
-                           <span class="sub-title">${item.name}</span></a>
-                         </li>`
-        })
-        html1 += ` 
-               <li class="item">
-                 <div class="container">
-                   <div class="title">${item.title}</div>
-                    <ul class="category-container" style="width: 202px;">
-                    ${html2}
-                     </ul>
-                    </div>
-                 </li>
-              `
-      });
-    }
-  });
-  console.log(html1)
-}
-
-
-
-
-
