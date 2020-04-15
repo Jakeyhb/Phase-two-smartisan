@@ -613,11 +613,11 @@ a {
 
 .draw-header {
   position: absolute;
-  right: -34px;
+  right: 0px;
   top: 45px;
 }
 #jakebyshow {
-  margin-right: 80px;
+  margin-right: 20px;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
   visibility: visible;
