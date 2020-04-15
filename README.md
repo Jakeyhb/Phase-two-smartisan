@@ -29,3 +29,7 @@ Two-phase-Project smartisan t.tt
     safe: true
     }
     })
+
+### 添加网页标题图标
+
+- <link rel="icon" href="//static.smartisanos.cn/indexnew/favicon.ico">

@@ -39,28 +39,9 @@ var html1 = "";
 var html2 = "";
 let timeout;
 let timeout2;
-
 // 鼠标移入事件
 // 进行防抖处理
 // 数据的渲染
-
-// $(".title-wrappercont>.title-content li").each((i) => {
-// $(document).ready(function () {
-
-//   $(this).parents("li").find("ul").slideToggle();
-// });
-
-// $('.title-wrappercont>.title-content li a').on('mousemove', function (e) {
-//   // console.log('target');  //被点击了
-//   // $('body').css('backgroundColor','#ff0');
-//   var target = e.srcElement || e.target;
-//   str2 = $(this).html()
-//   loadnav()
-
-
-// })
-// var mouose = true;
-
 $(".title-wrappercont>.title-content>li>a").mouseover(function (e) {
   htmlitem = ""
   var target = e.srcElement || e.target;
@@ -71,12 +52,7 @@ $(".title-wrappercont>.title-content>li>a").mouseover(function (e) {
     // console.log(str2)
     str2 = $(this).html()
     $(".category-wrapper").children().remove();
-    if (!htmlitem) {
-      loadnav()
-
-    }
-
-
+    loadnav()
     $("#sub").removeClass("sub-panel-wrapper-hide");
     $("#sub").addClass("sub-panel-wrapper-show");
     // console.log(str2)
@@ -84,12 +60,9 @@ $(".title-wrappercont>.title-content>li>a").mouseover(function (e) {
     $("#navli").removeClass("active");
     // 对元素进行添加和移除class
     $(target).addClass("active");
-    console.log(htmlitem)
+    // console.log(htmlitem)
   }, 200);
 });
-
-
-
 $(".title-wrappercont>.title-content li a").mouseout(function (e) {
   var target = e.srcElement || e.target;
   clearTimeout(timeout);
@@ -98,12 +71,10 @@ $(".title-wrappercont>.title-content li a").mouseout(function (e) {
     $(".category-wrapper").children().remove();
     $("#sub").removeClass("sub-panel-wrapper-show");
     $("#sub").addClass("sub-panel-wrapper-hide");
-    // console.log(html)
   }, 200)
   $(target).removeClass("active");
   // $(".category-wrapper").remove();
 });
-
 //下拉列表中的事件
 $(".nav-sub-container").mouseover(function () {
   clearTimeout(timeout2);
@@ -210,15 +181,10 @@ function rendernav(res) {
         html2 = "";
       });
       $(".category-wrapper").html(htmlitem);
-
-      // return false
     }
-
   });
-
-  // console.log(html)
 }
-// loadnav();
+
 //banner
 var swiper = new Swiper('.swiper-container', {
   spaceBetween: 30,
