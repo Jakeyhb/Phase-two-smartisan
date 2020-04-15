@@ -32,6 +32,43 @@ $(function () {
 
   })
 })
+
+
+// 首页个人信息
+var timsasider = null
+$(".aside-icon-user").mouseover((e) => {
+  var target = e.srcElement || e.target;
+  clearTimeout(timsasider)
+  timsasider = setTimeout(() => {
+    // console.log(1)
+    $(".user-drawer-wrapper").attr("id", "jakebyshow");
+  }, 500);
+})
+$(".aside-icon-user").mouseout((e) => {
+  var target = e.srcElement || e.target;
+  clearTimeout(timsasider)
+  timsasider = setTimeout(() => {
+    console.log(1)
+    $(".user-drawer-wrapper").attr("id", "aside");
+  }, 500);
+})
+
+$(".avator-wrapper").mousemove(() => {
+  // console.log($(".user-content").html())
+  // var target = e.srcElement || e.target;
+  clearTimeout(timsasider)
+})
+
+
+
+$(".avator-wrapper").mouseout((e) => {
+  var target = e.srcElement || e.target;
+  clearTimeout(timsasider)
+  $(".user-drawer-wrapper").attr("id", "aside");
+})
+
+
+
 var str1 = ""
 var str2 = "";
 var htmlitem = "";
@@ -424,4 +461,6 @@ dylist();
 // });
 
 
-// 下拉列表
+
+
+

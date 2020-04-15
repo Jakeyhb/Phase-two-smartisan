@@ -59,12 +59,19 @@ let connect_options = {
                     "/dy": ""
                 }
             }),
-            
+
             proxy("/secon_nav", {
                 target: "https://shopapi.smartisan.com/v1/cms/second_nav",
                 changeOrigin: true,
                 pathRewrite: {
                     "/secon_nav": ""
+                }
+            }),
+            proxy("/denglu", {
+                target: "http://localhost/php/Smartisanback_dev/login.php",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/denglu": ""
                 }
             })
         ]
@@ -83,7 +90,7 @@ gulp.task('connect', async () => {
 
 gulp.task("html", async () => {
     // 刨除部分文件不做操作;
-    gulp.src(["./src/html/**/index.html"]) // src 拿出index.html变成工作了流;
+    gulp.src(["./src/html/**/*.html"]) // src 拿出index.html变成工作了流;
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'

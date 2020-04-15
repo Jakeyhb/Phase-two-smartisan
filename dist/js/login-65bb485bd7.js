@@ -1,0 +1,2 @@
+"use strict";$(".btn-wrapper").on("click",function(){if(0===$("#username").val().length||0===$("#password").val().length)return alert("请输入用户名或密码再进行登陆"),!1;var e={username:$("#username").val(),password:$("#password").val()};xhrGet("http://localhost:3000/denglu",function(e){e=JSON.parse(e),console.log(e),"success"===e.type?($(".btn-wrapper a").css({color:"#FF6A6A"}),$(".btn-wrapper a").html("欢迎登录..."),localStorage.setItem("flage",e.detail.flage),setTimeout(function(){location.href="../index.html"},1e3)):alert(e.detail)},e)});
+//# sourceMappingURL=login-65bb485bd7.js.map
