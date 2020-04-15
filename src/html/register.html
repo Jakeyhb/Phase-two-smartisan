@@ -59,6 +59,7 @@
                     >手机号/邮箱</label
                   >
                   <input
+                    id="username"
                     type="text"
                     name="username"
                     aria-labelledby="u-required u-format-error u-not-exist"
@@ -119,6 +120,7 @@
                     >密码</label
                   >
                   <input
+                    id="password"
                     type="password"
                     name="password"
                     aria-labelledby="p-required p-error"
@@ -186,12 +188,8 @@
             </ul>
 
             <div class="btn-wrapper">
-              <div
-                class="btn btn-primary"
-                ng-class="{'disabled':form.$invalid}"
-                ng-click="login()"
-              >
-                <a role="button">注册</a>
+              <div class="btn btn-primary">
+                <a role="button" id="reg">注册</a>
               </div>
             </div>
             <!-- ngIf: isMobile || isMiniprogram -->
@@ -267,5 +265,10 @@
         </h4>
       </div>
     </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/utils.js"></script>
+
+    <script src="../js/reginser.js"></script>
   </body>
 </html>
