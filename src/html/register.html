@@ -20,7 +20,7 @@
       <div class="dialog dialog-shadow">
         <div class="title">
           <h4 ng-bind="dialogTitle" class="ng-binding">
-            使用 Smartisan ID 登录官网
+            使用 Smartisan ID 注册
           </h4>
         </div>
         <!-- 登录框 -->
@@ -40,7 +40,16 @@
                   i-animation="errAnimation.username"
                   style="opacity: 1;"
                 >
-                  <span class="icon"><i>手机号/邮箱</i></span>
+                  <span class="icon"
+                    ><i
+                      style="
+                        background: url(https://static.smartisanos.cn/account.common/img/dialog-input-icons_ff627ad6dc.png)
+                          no-repeat;
+                        background-position: -1px;
+                      "
+                      >手机号/邮箱</i
+                    ></span
+                  >
                   <!-- ngIf: showCcc -->
                   <label
                     for="username"
@@ -93,7 +102,16 @@
                   i-animation="errAnimation.password"
                   style="opacity: 1;"
                 >
-                  <span class="icon"><i>密码</i></span>
+                  <span class="icon"
+                    ><i
+                      style="
+                        background: url(https://static.smartisanos.cn/account.common/img/dialog-input-icons_ff627ad6dc.png)
+                          no-repeat;
+                        background-position: -45px;
+                      "
+                      >密码</i
+                    ></span
+                  >
                   <label
                     for="password"
                     class="placeholder"
@@ -139,7 +157,7 @@
                 ng-class="{'notes': isEmbedNotes}"
               >
                 <!-- ngIf: !isMiniprogram -->
-                <div
+                <!-- <div
                   class="auto ng-binding ng-scope"
                   ng-click="remembered = !remembered"
                   ng-if="!isMiniprogram"
@@ -152,25 +170,28 @@
                     ><a></a
                   ></span>
                   自动登录
-                </div>
-                <!-- end ngIf: !isMiniprogram --><a
+                </div> -->
+                <!-- end ngIf: !isMiniprogram -->
+                <!-- <a
                   class="forgotpassword ng-binding"
                   ng-click="forgotPassword()"
                   >忘记密码？</a
-                >
-                <a class="registercloud ng-binding" ng-click="toRegister()"
+                > -->
+                <!-- <a class="registercloud ng-binding" ng-click="toRegister()"
                   >短信验证码登录</a
-                >
+                > -->
+                <!-- </li> -->
+                <!-- end ngIf: !(isMobile || isMiniprogram) -->
               </li>
-              <!-- end ngIf: !(isMobile || isMiniprogram) -->
             </ul>
+
             <div class="btn-wrapper">
               <div
                 class="btn btn-primary"
                 ng-class="{'disabled':form.$invalid}"
                 ng-click="login()"
               >
-                <a role="button">登录</a>
+                <a role="button">注册</a>
               </div>
             </div>
             <!-- ngIf: isMobile || isMiniprogram -->
@@ -179,7 +200,7 @@
                 <li style="float: left;">
                   <!-- ngIf: !isMiniprogram -->
                   <ul class="login-three ng-scope" ng-if="!isMiniprogram">
-                    <li class="text">其他账号登录：</li>
+                    <li class="text">其他账号注册：</li>
                     <li
                       role="button"
                       class="wechat"
@@ -205,8 +226,8 @@
                     role="button"
                     ng-click="switchModel()"
                     class="ng-binding"
-                    href="./register.html"
-                    >没有账号去注册<span class="smartisan-icon gt"></span
+                    href="./login.html"
+                    >已有账号去登录<span class="smartisan-icon gt"></span
                   ></a>
                 </li>
                 <!-- end ngIf: !(isMobile || isMiniprogram) -->

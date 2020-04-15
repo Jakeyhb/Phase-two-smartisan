@@ -1,0 +1,576 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.v2 {
+  background: url(../img/bg_9b9dcb65ff.png) repeat;
+  width: 100%;
+  height: 800px;
+  height: auto !important;
+  background-size: 100px;
+}
+body {
+  color: #666;
+  font-family: 华文黑体, "Microsoft YaHei", 微软雅黑, STHei, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: url(../img/bg_9b9dcb65ff.png) repeat;
+}
+
+.v2 .dialog {
+  box-shadow: 0 0 1px #000 inset;
+  background: url(https://static.smartisanos.cn/account.common/img/dialog-gray-bg_42c40b3eb6.png)
+    #fff bottom repeat-x;
+  width: 450px;
+  border: 2px solid #dadada;
+  border-radius: 10px;
+  top: 50px;
+  left: 50%;
+  margin-left: -225px;
+  position: absolute;
+  /* background-color: orange; */
+  -webkit-transition: 0.5s ease-in-out; /* css的transition允许css的属性值在一定的时间内从一个状态平滑的过渡到另一个状态 */
+  -moz-transition: 0.5s ease-in-out; /*这里为了兼容其他浏览器*/
+  -o-transition: 0.5s ease-in-out;
+  height: 643px;
+  /* z-index: 12; */
+}
+
+/* .v2 .dialog {
+  
+  border-radius: 12px;
+  display: none;
+  margin: -163px 0 0 -218px;
+  width: 436px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+} */
+
+.v2 .dialog-shadow {
+  -webkit-box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2),
+    0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04),
+    0 10px 20px -10px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2),
+    0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04),
+    0 10px 20px -10px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2),
+    0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04),
+    0 10px 20px -10px rgba(0, 0, 0, 0.04);
+}
+/* .dialog-shadow,
+.v2 .bbs .dialog-shadow, */
+
+.dialog .title {
+  position: relative;
+  background-image: url(https://static.smartisanos.cn/account.common/img/v2/logo/smartisan_4ada7fecea@2x.png);
+  background-image: -webkit-image-set(
+    url(https://static.smartisanos.cn/account.common/img/v2/logo/smartisan_4ada7fecea@2x.png) 1x,
+    url(https://static.smartisanos.cn/account.common/img/v2/logo/smartisan_4ada7fecea@2x.png) 2x
+  );
+  background-size: 160px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 92px;
+  margin: 23px 0 50px;
+  padding: 75px 0 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.dialog .title h4 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  line-height: 1em;
+  height: auto;
+  color: #333;
+  font-weight: 400;
+}
+.v2 .dialog .title h4 {
+  font-size: 20px;
+  padding: 0;
+  text-align: center;
+  color: #666;
+  border-bottom: 0px solid #dcdcdc;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-weight: 700;
+}
+
+/* 登录框 */
+.jake_ng-animate {
+  padding: 0 40px 22px;
+  height: 338px;
+  width: 340px;
+  /* background-color: orange; */
+}
+form {
+  display: block;
+  margin-top: 0em;
+}
+.common-form li {
+  clear: both;
+  margin-bottom: 15px;
+  position: relative;
+}
+.input {
+  background: #fff;
+  box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.4) inset,
+    -1px 0 3px -2px rgba(0, 0, 0, 0.1) inset;
+  border: #ccc solid 1px;
+  border-radius: 6px;
+  font-size: 18px;
+  height: 46px;
+  line-height: 46px;
+  opacity: 0.618;
+  position: relative;
+  transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in;
+}
+.input .icon {
+  background: -webkit-linear-gradient(#f8f8f8, #fafafa);
+  background: -moz-linear-gradient(#f8f8f8, #fafafa);
+  background: -ms-linear-gradient(#f8f8f8, #fafafa);
+  background: -o-linear-gradient(#f8f8f8, #fafafa);
+  border-radius: 6px 0 0 6px;
+  border-right: solid 1px #ccc;
+  box-shadow: 1px 0 3px -1px rgba(0, 0, 0, 0.1);
+  float: left;
+  height: 46px;
+  width: 46px;
+  overflow: hidden;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+ol,
+ul {
+  list-style: none;
+}
+user agent stylesheet ul {
+  list-style-type: disc;
+}
+.input .icon i {
+  background: url(https://static.smartisanos.cn/account.common/img/dialog-input-icons_ff627ad6dc.png)
+    no-repeat;
+  /* background-image: -webkit-image-set(
+    url(https://static.smartisanos.cn/account.common/img/dialog-input-icons_ff627ad6dc.png) 1x,
+    url(https://static.smartisanos.cn/account.common/img/dialog-input-icons_ff627ad6dc.png) 2x
+  ); */
+  background-position: -2px;
+  cursor: pointer;
+  display: block;
+  height: 46px;
+  text-indent: -9999em;
+  width: 46px;
+}
+.input .placeholder {
+  color: #bebebe;
+  float: left;
+  font-size: 16px;
+  position: absolute;
+  left: 62px;
+  top: 0;
+}
+.v2 .password .input input:-webkit-autofill,
+.v2 .password-repeat .input input:-webkit-autofill,
+.v2 .username .input input:-webkit-autofill,
+.v2 li.mail input:-webkit-autofill,
+.v2 li.password input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  -webkit-border-radius: 7px;
+}
+.v2 .input input {
+  width: 260px;
+  height: 19px;
+  padding: 12px 12px 8px 15px;
+  border-radius: 7px;
+  border: white;
+}
+input {
+  outline: none;
+}
+.input .warning {
+  background: #d16d62;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-size: 12px;
+  font-weight: 400;
+  height: 26px;
+  line-height: 26px;
+  margin: 10px 0 0;
+  opacity: 0;
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 10;
+}
+.common-form li.password .icon i {
+  background-position: -48px;
+}
+.v2 .login-form .remember,
+.v2 .reg-login-form .remember {
+  margin: 15px 5px 25px;
+}
+.login-form .remember,
+.reg-login-form .remember {
+  margin: 24px 0 36px;
+  height: 12px;
+}
+.login-form .remember .auto {
+  color: #999;
+  float: left;
+  font-size: 12px;
+  cursor: pointer;
+  padding-left: 22px;
+}
+.login-form .remember .auto .checkbox {
+  position: absolute;
+  top: -4px;
+  left: -2px;
+}
+.v2 .checkbox {
+  background-position: 0 -18px;
+}
+.v2 .checkbox,
+.v2 .checkbox a {
+  background: url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf.png)
+    0 2px no-repeat;
+  /* background-image: -webkit-image-set(
+    url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf.png) 1x,
+    url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf.png) 2x
+  ); */
+}
+.checkbox {
+  background: url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf.png)
+    0 0 no-repeat;
+  background-image: -webkit-image-set(
+    url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf.png) 1x,
+    url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf.png) 2x
+  );
+  float: left;
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+.checkbox a {
+  background: url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf@2x.png)
+    no-repeat 0 -19px;
+  background-image: -webkit-image-set(url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf@2x.png) 1x,url(https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf@2x.png) 2x);
+  display: none;
+  height: 20px;
+  width: 20px;
+}
+a {
+  color: #5079d9;
+  cursor: pointer;
+  text-decoration: none;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.form-v2.login-form .remember .forgotpassword {
+  float: right;
+  margin-right: 3px;
+}
+.login-form .remember .forgotpassword {
+  float: left;
+  font-size: 12px;
+  width: 50px;
+  white-space: nowrap;
+}
+.form-v2.login-form .remember .registercloud {
+  margin-left: 0;
+  float: right;
+}
+.login-form .remember .registercloud {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  margin-left: 132px;
+  margin-left: 130px \9 \0;
+  margin-right: 8px;
+}
+.login-form .remember .registercloud:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background-color: #e5e5e5;
+  margin-left: 9px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+.login-v2 .login-form .btn-wrapper {
+  margin: 30px 0 0;
+}
+.btn-primary {
+  background: #6383c6;
+  background: linear-gradient(#6383c6, #4262af);
+}
+.btn {
+  border-radius: 6px;
+  clear: both;
+  cursor: pointer;
+  height: 46px;
+  line-height: 46px;
+  margin: 0 0 12px;
+  padding: 1px;
+  -webkit-touch-callout: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.496094) 0 1px 0;
+}
+.btn-primary a {
+  background: #5f7ed7;
+  background: linear-gradient(#6f97e5, #527ed9);
+  box-shadow: inset 0 1px 2px #7ea1e8;
+  color: #fff;
+  text-shadow: #4f70b3 0 -1px 0;
+}
+.btn a {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+}
+.v2.login-v2 .info-wrapper2 {
+  padding-top: 2px;
+  margin-bottom: -10px;
+}
+.login-three li.text {
+  background-image: none;
+  margin-left: 0;
+  width: auto;
+  color: #bbb;
+  font-size: 100%;
+  cursor: default;
+  color: #999;
+}
+.form-v2 .info-wrapper li,
+.form-v2 .info-wrapper li a,
+.form-v2 .info-wrapper2 li,
+.form-v2 .info-wrapper2 li a {
+  color: #999;
+  font-size: 12px;
+  line-height: 17px;
+}
+.login-three li {
+  width: 20px;
+  height: 17px;
+  margin-left: 15px;
+  float: left;
+  cursor: pointer;
+  background-image: url(https://static.smartisanos.cn/account.common/img/v2/icons_c3a3154da5@2x.png);
+  background-image: -webkit-image-set(
+    url(https://static.smartisanos.cn/account.common/img/v2/icons_c3a3154da5@2x.png) 1x,
+    url(https://static.smartisanos.cn/account.common/img/v2/icons_c3a3154da5@2x.png) 2x
+  );
+  background-size: 110px 17px;
+  background-position: 1px 0;
+  background-repeat: no-repeat;
+  transition: all 1s ease;
+}
+
+.agreement {
+  width: 100%;
+  font-size: 12px;
+  margin: 30px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid #dadada;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+.login-three li.wechat {
+  margin-left: 10px;
+}
+.login-three li.weibo {
+  background-position: -30px 0;
+}
+.login-three li.qq {
+  background-position: -62px 0;
+}
+.login-three li.alipay {
+  background-position: -92px 0;
+}
+.login-three::after {
+  content: "";
+  background-image: url(https://static.smartisanos.cn/account.common/img/v2/icons-hover_7b3065c847@2x.png);
+  background-image: -webkit-image-set(
+    url(https://static.smartisanos.cn/account.common/img/v2/icons-hover_7b3065c847@2x.png) 1x,
+    url(https://static.smartisanos.cn/account.common/img/v2/icons-hover_7b3065c847@2x.png) 2x
+  );
+}
+.v2 .info-wrapper2 > ul > li,
+.v2 .info-wrapper > ul > li {
+  float: right;
+}
+.v2 .smartisan-icon.gt {
+  margin-top: -1px;
+}
+.smartisan-icon {
+  display: inline-block;
+  font-family: SmartisanIconFont;
+  vertical-align: middle;
+}
+.smartisan-icon.gt:before {
+  content: "C";
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.reg-login-form .agreement,
+.v2.login-v2 .agreement {
+  width: 100%;
+  font-size: 12px;
+  margin: 30px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid #dadada;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+.agreement span {
+  display: block;
+  color: #999;
+  text-align: center;
+}
+.v2 .copyright {
+  display: block;
+}
+.copyright {
+  top: 760px;
+  display: none;
+  width: 100%;
+  clear: both;
+  color: #434d55;
+  font-size: 12px;
+  padding: 0 0 60px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.copyright > div {
+  display: inline-block;
+  margin: 0 auto;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.copyright h4 {
+  clear: both;
+  padding: 10px 0 0;
+}
