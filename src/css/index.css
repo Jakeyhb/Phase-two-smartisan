@@ -466,7 +466,7 @@ img {
 .title-wrapperseconednav .sub-panel-wrapper-show {
   width: 100%;
   left: 0;
-  top: 75px;
+  /* top: 75px; */
   z-index: 10;
   background-color: #fff;
   position: absolute;

@@ -9,9 +9,9 @@
   </head>
   <body>
     <ul>
-      <!-- <li class="itemli"><a href="" id="itemli">首页</a></li>
-      <li class="itemli"><a href="" id="itemli">畅呼吸</a></li>-->
-      <li class="itemli"><a href="" id="itemli">官方配件</a></li>
+      <li class="itemli"><a href="" id="itemli">首页</a></li>
+      <!-- <li class="itemli"><a href="" id="itemli">畅呼吸</a></li> -->
+      <!-- <li class="itemli"><a href="" id="itemli">官方配件</a></li> -->
       <!-- <li class="itemli"><a href="" id="itemli">服饰箱包</a></li> -->
     </ul>
     <div class="title-wrapperseconednav">
@@ -121,6 +121,9 @@
                  </li>
                  
               `;
+            html += html1;
+            html1 = "";
+            html2 = "";
           });
         }
         if (item.name === str2 && item.list.length > 1) {

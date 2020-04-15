@@ -32,8 +32,9 @@ $(function () {
 
   })
 })
-var str2 = "首页";
-var html = "";
+var str1 = ""
+var str2 = "";
+var htmlitem = "";
 var html1 = "";
 var html2 = "";
 let timeout;
@@ -42,52 +43,81 @@ let timeout2;
 // 鼠标移入事件
 // 进行防抖处理
 // 数据的渲染
-$("#navli").mousemove(function (e) {
+
+// $(".title-wrappercont>.title-content li").each((i) => {
+// $(document).ready(function () {
+
+//   $(this).parents("li").find("ul").slideToggle();
+// });
+
+// $('.title-wrappercont>.title-content li a').on('mousemove', function (e) {
+//   // console.log('target');  //被点击了
+//   // $('body').css('backgroundColor','#ff0');
+//   var target = e.srcElement || e.target;
+//   str2 = $(this).html()
+//   loadnav()
+
+
+// })
+// var mouose = true;
+
+$(".title-wrappercont>.title-content>li>a").mouseover(function (e) {
+  htmlitem = ""
   var target = e.srcElement || e.target;
-  // console.log(str2)
   clearTimeout(timeout);
   // clearTimeout(timeout);
   //先让页面变干净更好的渲染
-
   timeout = setTimeout(() => {
+    // console.log(str2)
+    str2 = $(this).html()
     $(".category-wrapper").children().remove();
-    // loadnav()
+    if (!htmlitem) {
+      loadnav()
+
+    }
+
+
+    $("#sub").removeClass("sub-panel-wrapper-hide");
+    $("#sub").addClass("sub-panel-wrapper-show");
+    // console.log(str2)
+    // $(".category-wrapper .item").remove();
     $("#navli").removeClass("active");
     // 对元素进行添加和移除class
-    $("#sub").removeClass("sub-panel-wrapper-hide");
-    $(".category-wrapper").html(html);
-    $("#sub").addClass("sub-panel-wrapper-show");
-    // $(target).addClass("active");
+    $(target).addClass("active");
+    console.log(htmlitem)
   }, 200);
 });
 
 
 
-$("#navli").mouseleave(function (e) {
+$(".title-wrappercont>.title-content li a").mouseout(function (e) {
   var target = e.srcElement || e.target;
   clearTimeout(timeout);
   clearTimeout(timeout2);
   timeout2 = setTimeout(() => {
+    $(".category-wrapper").children().remove();
     $("#sub").removeClass("sub-panel-wrapper-show");
     $("#sub").addClass("sub-panel-wrapper-hide");
-
-  }, 500)
-  // $(target).removeClass("active");
-
+    // console.log(html)
+  }, 200)
+  $(target).removeClass("active");
   // $(".category-wrapper").remove();
 });
 
-$(".nav-sub-container").mousemove(function () {
+//下拉列表中的事件
+$(".nav-sub-container").mouseover(function () {
   clearTimeout(timeout2);
 })
 
 
-$(".nav-sub-container").mouseleave(function () {
+$(".nav-sub-container").mouseleave(function (e) {
+  var target = e.srcElement || e.target;
   clearTimeout(timeout2);
   clearTimeout(timeout);
   $("#sub").removeClass("sub-panel-wrapper-show");
   $("#sub").addClass("sub-panel-wrapper-hide");
-  // $(target).removeClass("active");
+  $(target).removeClass("active");
+  // console.log(html)
 
 })
 
@@ -103,15 +133,17 @@ function loadnav() {
   ajax(options);
 }
 function rendernav(res) {
+  // htmlitem = ""
   // console.log(res)
   res.forEach(function (item) {
     // console.log(item)
     // console.log(str2)
+    // console.log(item.list.length);
     if (item.name === str2 && item.list.length === 1) {
-      console.log(item.list.length);
-      // console.log(item.length);
+      // console.log(item);
       item.list.forEach(function (item) {
         item.sub.forEach(function (item) {
+
           // console.log(item)
           html2 += `<li class="category-item">
                        <a
@@ -137,9 +169,13 @@ function rendernav(res) {
                  </ul>
                 </div>
              </li>
-             
           `;
+        htmlitem += `${html1}`;
+        html1 = "";
+        html2 = "";
       });
+      $(".category-wrapper").html(htmlitem);
+      // return false
     }
     if (item.name === str2 && item.list.length > 1) {
       let lisize = item.list.length;
@@ -169,15 +205,20 @@ function rendernav(res) {
             </ul>
           </div>
         </li>`;
-        html += html1;
+        htmlitem += html1;
         html1 = "";
         html2 = "";
       });
+      $(".category-wrapper").html(htmlitem);
+
+      // return false
     }
+
   });
+
   // console.log(html)
 }
-loadnav();
+// loadnav();
 //banner
 var swiper = new Swiper('.swiper-container', {
   spaceBetween: 30,
