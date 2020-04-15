@@ -33,41 +33,55 @@ $(function () {
   })
 })
 
-
+// console.log(localStorage.getItem("flage") !== null)
 // 首页个人信息
-var timsasider = null
-$(".aside-icon-user").mouseover((e) => {
-  var target = e.srcElement || e.target;
-  clearTimeout(timsasider)
-  timsasider = setTimeout(() => {
-    // console.log(1)
+//没有登录信息的话就不能显示  提示未登录
+if (localStorage.getItem("flage") !== null) {
+  var timsasider = null
+  $(".aside-icon-user").mouseover((e) => {
+    var target = e.srcElement || e.target;
+    clearTimeout(timsasider)
+    timsasider = setTimeout(() => {
+      // console.log(1)
+      $(".user-drawer-wrapper").attr("id", "jakebyshow");
+    }, 500);
+  })
+  $(".aside-icon-user").mouseout((e) => {
+    var target = e.srcElement || e.target;
+    clearTimeout(timsasider)
+    timsasider = setTimeout(() => {
+      console.log(1)
+      $(".user-drawer-wrapper").attr("id", "aside");
+    }, 500);
+  })
+
+  $(".jakebyaside").mouseover(() => {
+    // console.log($(".user-content").html())
+    // var target = e.srcElement || e.target;
+    clearTimeout(timsasider)
     $(".user-drawer-wrapper").attr("id", "jakebyshow");
-  }, 500);
-})
-$(".aside-icon-user").mouseout((e) => {
-  var target = e.srcElement || e.target;
-  clearTimeout(timsasider)
-  timsasider = setTimeout(() => {
-    console.log(1)
+  })
+  $(".jakebyaside").mouseout((e) => {
+    var target = e.srcElement || e.target;
+    clearTimeout(timsasider)
     $(".user-drawer-wrapper").attr("id", "aside");
-  }, 500);
+  })
+
+} else {
+  $(".aside-icon-user").mouseover((e) => {
+
+    var target = e.srcElement || e.target;
+    //未登录提示
+
+  })
+}
+// 退出登录
+
+$(".link-item.out").on('click', () => {
+  localStorage.removeItem("flage");
+  alert("退出登录")
+  window.location.reload()
 })
-
-$(".avator-wrapper").mousemove(() => {
-  // console.log($(".user-content").html())
-  // var target = e.srcElement || e.target;
-  clearTimeout(timsasider)
-})
-
-
-
-$(".avator-wrapper").mouseout((e) => {
-  var target = e.srcElement || e.target;
-  clearTimeout(timsasider)
-  $(".user-drawer-wrapper").attr("id", "aside");
-})
-
-
 
 var str1 = ""
 var str2 = "";

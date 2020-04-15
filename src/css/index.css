@@ -622,6 +622,7 @@ a {
   transition: all 0.15s;
   visibility: visible;
   opacity: 1;
+  z-index: 999999;
 }
 .user-drawer-wrapper {
   padding-top: 1px;

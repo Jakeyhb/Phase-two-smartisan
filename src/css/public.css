@@ -88,7 +88,7 @@ a {
   background-position: 0px -17px;
 }
 .top-aside-right .aside-icon-shop .shop-list {
-  z-index: 99999;
+  z-index: 999;
   position: absolute;
   right: 4px;
   top: 45px;
@@ -96,6 +96,7 @@ a {
   border-radius: 13px;
   opacity: 0;
   border: 1px solid #ddd;
+  /* right: 100px; */
 }
 .top-aside-right .aside-icon-shop .shop-list .lists-container {
   width: 360px;
