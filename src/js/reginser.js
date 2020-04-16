@@ -12,7 +12,7 @@ $(".btn-wrapper").on('click', () => {
 
   // 发送请求给后端;
   xhrGet(
-    "http://localhost/php/Smartisanback_dev/register.php",
+    "http://303z9z3029.qicp.vip/php/Smartisanback_dev/register.php",
     function (res) {
       res = JSON.parse(res);
       // console.log(res);

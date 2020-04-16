@@ -1,8 +1,9 @@
 {
+  "animate-opacity.js": "animate-opacity-31607f8daf.js",
   "jquery.lazyload.js": "jquery-66821f5682.lazyload.js",
-  "login.js": "login-65bb485bd7.js",
-  "public.js": "public-dbc3774b45.js",
-  "reginser.js": "reginser-dbe18df923.js",
+  "login.js": "login-d442f1525c.js",
+  "public.js": "public-e8928a46c3.js",
+  "reginser.js": "reginser-7141fe9093.js",
   "swiper.min.js": "swiper-1db5aea19d.min.js",
   "test.js": "test-50942caea2.js",
   "utils.js": "utils-4a48789407.js"

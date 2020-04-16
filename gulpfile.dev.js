@@ -95,7 +95,7 @@ gulp.task("html", async () => {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(gulp.dest("./dist/")) // 操作工作流 => 转存操作;
+        .pipe(gulp.dest("./dist/html/")) // 操作工作流 => 转存操作;
         .pipe(connect.reload())
 });
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function ismath(str1, str2) {
+      if (str1.split("").reverse().join("") === str2) {
+        console.log("true");
+      } else {
+        console.log("false");
+      }
+    }
+    var res = ismath("aaa", "aa");
+    console.log(res);
+
+    function unique(arr) {
+      return Array.from(new Set(arr));
+    }
+    var arr = [1, 1, "true", "true", true, true];
+    console.log(unique(arr));
+  </script>
+</html>

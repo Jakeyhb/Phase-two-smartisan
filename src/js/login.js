@@ -14,7 +14,7 @@ $(".btn-wrapper").on('click', () => {
   };
 
   xhrGet(
-    "http://localhost:3000/denglu",
+    "http://303z9z3029.qicp.vip/php/Smartisanback_dev/login.php",
     function (res) {
       res = JSON.parse(res);
       console.log(res);
