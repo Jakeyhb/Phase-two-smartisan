@@ -10,7 +10,8 @@ let minifyHtml = require('gulp-minify-html');
 let proxy = require("http-proxy-middleware").createProxyMiddleware;
 let connect = require("gulp-connect");
 
-
+let sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 // let connect_options = {
 //     root: "./dist",
 //     port: 3000,
@@ -96,6 +97,27 @@ gulp.task("img", async () => {
         // 把scss源进行处理，编译成 css;
         .pipe(gulp.dest("./dist/img/"))
 })
+gulp.task("scss", async () => {
+    gulp.src(["./src/scss/*.scss"])
+        // 把scss源进行处理，编译成 css;
+        .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.init())
+        .pipe(cssnano({ zindex: false }))
+        // 压缩
 
-gulp.task("build", gulp.series("dele", "img", "javascript", "css", "html"));
+
+        //添加了配置  导致压缩之后改写z-index的问题
+        // sourcemaps 写入
+        // 加上 sourcemaps.write(".")独立产生一个sourcemaps文件;
+        // sourcemaps.write() 什么都不加就是base64码直接写在了文件之中;
+        // 版本号;
+        .pipe(rev())
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest("./dist/css/"))
+        .pipe(rev.manifest())
+        // 把json文件存储在对应的路径下;
+        .pipe(gulp.dest('rev/css'));
+})
+
+gulp.task("build", gulp.series("dele", "img", "javascript", "scss", "html"));
 

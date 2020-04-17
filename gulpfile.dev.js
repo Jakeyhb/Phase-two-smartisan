@@ -73,6 +73,14 @@ let connect_options = {
                 pathRewrite: {
                     "/denglu": ""
                 }
+            }),
+
+            proxy("/parts", {
+                target: " https://shopapi.smartisan.com/v1/search/goods-list",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/parts": ""
+                }
             })
         ]
     }
@@ -133,6 +141,6 @@ gulp.task("watch", async () => {
     gulp.watch(["./src/scss/**/*.scss"], gulp.series("scss"));
 })
 
-gulp.task("dev", gulp.parallel("watch", "connect", gulp.series("dele", "html", "javascript", "css", "scss", "img")));
+gulp.task("dev", gulp.parallel("watch", "connect", gulp.series("dele", "html", "javascript", "scss", "img")));
 
 

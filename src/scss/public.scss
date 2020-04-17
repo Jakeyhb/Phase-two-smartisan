@@ -20,6 +20,7 @@ a,
 a:hover {
   text-decoration: none;
 }
+
 a {
   color: #5079d9;
   cursor: pointer;
@@ -88,7 +89,7 @@ a {
   background-position: 0px -17px;
 }
 .top-aside-right .aside-icon-shop .shop-list {
-  z-index: 99999;
+  z-index: 999;
   position: absolute;
   right: 4px;
   top: 45px;
@@ -96,6 +97,7 @@ a {
   border-radius: 13px;
   opacity: 0;
   border: 1px solid #ddd;
+  /* right: 100px; */
 }
 .top-aside-right .aside-icon-shop .shop-list .lists-container {
   width: 360px;
@@ -109,7 +111,7 @@ a {
 
   /* visibility: hidden; */
 }
-.show-list {
+.top-aside-right .aside-icon-shop .show-list {
   opacity: 1;
   transition: all 0.2s;
 }
@@ -153,7 +155,7 @@ a {
   padding: 0 20px;
 }
 /* 鼠标移入的active */
-.tabs-item li.active {
+.tabs-item li .active {
   color: #e5e5e5;
   font-weight: 700;
 }
@@ -180,6 +182,7 @@ a {
   background-color: #fff;
   position: relative;
 }
+
 .main-title {
   width: 1220px;
   height: 100%;
