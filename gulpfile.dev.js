@@ -81,6 +81,13 @@ let connect_options = {
                 pathRewrite: {
                     "/parts": ""
                 }
+            }),
+            proxy("/datalist", {
+                target: " https://shopapi.smartisan.com/product/home",
+                changeOrigin: true,
+                pathRewrite: {
+                    "/datalist": ""
+                }
             })
         ]
     }

@@ -53,27 +53,9 @@ function parts() {
         </div>
         <div  class="markup-tag"></div>
        </section>`
-
-
       // console.log(item.spuInfo)
       // var arry = [];
       // arry.push(item.spuInfo)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     })
 
