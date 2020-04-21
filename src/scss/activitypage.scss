@@ -1,0 +1,329 @@
+body {
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB,
+    Microsoft Yahei, \\5fae\8f6f\96c5\9ed1, STHeiti, \\534e\6587\7ec6\9ed1,
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-size: 14px;
+  color: #666;
+  background-color: white;
+}
+
+.actimg {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  left: 50%;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.tentime {
+  width: 100%;
+  .wrapper-text {
+    background-color: white;
+    width: 100%;
+    .content-text {
+      width: 1220px;
+      margin: 0 auto;
+      padding: 75px 0;
+    }
+    .type-title h3 {
+      font-size: 36px;
+      line-height: 36px;
+      color: #333;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+.floor-content {
+  
+  .wrapper-text {
+    
+    width: 100%;
+  }
+  .content-text {
+   
+    width: 1220px;
+    margin: 0 auto;
+    padding: 75px 0;
+    .type-title h3 {
+      font-size: 36px;
+      line-height: 36px;
+      color: #333;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  .coupon-wrapper {
+    
+    background: #fff;
+    ul.coupon-list {
+      display: flex;
+      width: 1220px;
+      margin: 0 auto;
+      padding: 0 0 50px;
+      li {
+        position: relative;
+        margin-left: 182px;
+         .coupon-bg {
+          float: left;
+          background: url(https://static.smartisanos.cn/www/assets/images/coupon-bg@2x.0fa5041278b36ec8413725c65cd66ccf.png) 50% 0 no-repeat;
+          background-image: -webkit-image-set(url(https://static.smartisanos.cn/www/assets/images/coupon-bg@2x.0fa5041278b36ec8413725c65cd66ccf.png) 1x,url(https://static.smartisanos.cn/www/assets/images/coupon-bg@2x.0fa5041278b36ec8413725c65cd66ccf.png) 2x);
+          text-align: center;
+          width: 414px;
+          height: 189px;
+          color: #765636;
+          font-family: Smartisan Maquette Bold;
+          font-size: 12px;
+           .c-rule{
+            position: absolute;
+            top: 26px;
+            left: 60px;
+            text-align: center;
+            letter-spacing: px;
+            font-weight: 800;
+            width: 12px;
+            line-height: 14px;
+        }
+       .c-money {
+          position: absolute;
+          top: 31px;
+          left: 110px;
+          font-size: 44px;
+          font-weight: 900;
+        }
+        .c-detail {
+        position: absolute;
+        text-align: left;
+        width: 195px;
+        top: 108px;
+        left: 90px;
+        font-weight: 800;
+        height: 38px;
+        line-height: 38px;
+        span {
+          display: inline-block;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 19px;
+          word-break: break-all;
+      }
+           }
+        .c-time {
+          position: absolute;
+          white-space: nowrap;
+          overflow: hidden;
+          text-align: left;
+          width: 195px;
+          top: 88px;
+          left: 130px;
+          font-weight: 800;
+          -webkit-transform: scale(.91);
+          transform: scale(.91);
+            }
+          .c-type-3 {
+        position: absolute;
+        top: 31px;
+        left: 301px;
+        font-size: 30px;
+        letter-spacing: 9px;
+        font-weight: 900;
+        width: 20px;
+           }
+      }
+      .coupon-info{
+        clear: both;
+        display: inline-block;
+        white-space: nowrap;
+        width: 450px;
+        text-align: left;
+        margin-left: 53px;
+        vertical-align: top;
+       h3 {
+          font-size: 24px;
+          font-family: Smartisan Maquette Bold;
+          color: #735332;
+          line-height: 28px;
+          font-weight: 900;
+      }
+      h4 {
+        font-size: 12px;
+        font-family: Smartisan Maquette Bold;
+        color: #8f755b;
+        line-height: 24px;
+        font-weight: 900;
+        margin-top: 10px;
+    }
+        .comp-btn {
+           margin-top: 20px;
+           .btn-coupon{
+            width: 102px;
+            height: 37px;
+            font-size: 13px;
+            line-height: 37px;
+            box-sizing: border-box;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 6px;
+        }
+        a {
+            display: inline-block;
+        }
+        .btn-coupon.blue .btn-coupon.red {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .btn-coupon.blue {
+          background-image: url(https://static.smartisanos.cn/www/assets/images/coupon-button-blue@2x.f300d0a25b16cc24ce0924209986a93e.png);
+      }
+        }
+    }
+      }
+    }
+  }
+}
+
+
+.actviitypage {
+ top: 20px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  margin: 0 auto;
+  .actlist{
+    margin-top: 20px;
+    width: 1220px;
+    margin: 0 auto;
+    
+  .title{
+   
+    padding: 75px 0;
+    h3 {
+      font-size: 36px;
+      line-height: 36px;
+      color: #333;
+      text-align: center;
+      font-weight: 700;
+  }
+
+  }
+}
+}
+
+.activproudect{
+
+  ul{
+    display: flex;
+    justify-content: space-between;
+    li.item {
+      box-sizing: border-box;
+      border: 1px solid #e5e5e5;
+      background: #fff;
+      border-radius: 10px;
+      position: relative;
+      transition: all .2s linear;
+      width: calc((100% - 20px)/3);
+      padding: 41px;
+     
+  }
+  .item-img{
+    width: 318px;
+    height: 318px;
+    margin: 0 auto;
+    // background-color: orange;
+    img{
+        width: 100%;
+        height: 100%;
+        // position: absolute;
+        // opacity: 1;
+        transition: all .15s ease-out;
+    
+    }
+  }
+  }
+  .content{
+    margin-top: 20px;
+   .titlea{
+    font-size: 18px;
+    text-align: center;
+   }
+   h3 {
+    font-size: 17px;
+    line-height: 32px;
+    color: #333;
+    font-weight: 700;
+    }
+    h4{
+    font-size: 14px;
+    line-height: 30px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    }
+  }
+  .price-info {
+    font-size: 14px;
+    font-weight: 500;
+    color: #d44d44;
+    font-family: SmartisanMaquette;
+    
+    display: inline-block;
+    
+}
+.new-price{
+  color: #d44d44;
+  font-weight: 900;
+    line-height: 1;
+    font-size: 18px;
+    text-align: center;
+i{
+  
+  font-weight: 700;
+}
+}
+
+.price-cross{
+  text-align: center;
+}
+
+}
+
+button {
+  border: 0px ;
+  margin: 15px 0 0 100px ;
+  
+  background-image: url(https://static.smartisanos.cn/www/assets/images/coupon-button-blue@2x.f300d0a25b16cc24ce0924209986a93e.png);
+  a {
+    display: block;
+    width: 122px;
+    height: 42px;
+    background-size: 122px;
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0,0,0,.15);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0 auto;
+    font-weight: 700;
+  }
+  
+}
+
