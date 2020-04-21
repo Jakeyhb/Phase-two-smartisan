@@ -1,12 +1,12 @@
 
 function parts() {
 
-  console.log(2)
+  // console.log(2)
   function load() {
 
     var options = {
       // http://303z9z3029.qicp.vip/
-      url: "http://303z9z3029.qicp.vip/parts",
+      url: "http://303z9z3029.qicp.vip/shoplist",
 
       success: render,
       dataType: "json",
@@ -15,7 +15,7 @@ function parts() {
         category_id: "185",
         page: 1,
         sort: "sort",
-        num: 20,
+        num: 30,
         type: "shop",
         channel_id: 1001
       }

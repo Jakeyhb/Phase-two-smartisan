@@ -75,11 +75,11 @@ let connect_options = {
                 }
             }),
 
-            proxy("/parts", {
+            proxy("/shoplist", {
                 target: " https://shopapi.smartisan.com/v1/search/goods-list",
                 changeOrigin: true,
                 pathRewrite: {
-                    "/parts": ""
+                    "/shoplist": ""
                 }
             }),
             proxy("/datalist", {
