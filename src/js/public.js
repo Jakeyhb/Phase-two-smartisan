@@ -110,6 +110,36 @@ function chenck() {
 
 }
 
+// 吸顶效果：
+function xd() {
+  var TIMER;//定义全局变量
+  var navtop = 45;
+  $(window).scroll(function () {
+    clearTimeout(TIMER);//必须要有这句
+
+    if ($(document).scrollTop() >= navtop) {
+
+      $("#sennav").css(
+        {
+          "position": ""
+        }
+      );
+
+    } else {
+      TIMER = setTimeout(function () {
+        $("#sennav").css(
+          {
+            // top: navtop
+          }
+        );
+      }, 100);
+    }
+  });
+
+}
+
+
+
 
 var str1 = ""
 var str2 = "";
@@ -648,7 +678,7 @@ function dy() {
 
 
 // 函数的统一执行
-
+// xd()
 chenck()
 
 dy();

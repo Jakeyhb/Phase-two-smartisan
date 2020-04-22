@@ -22,7 +22,7 @@ let del = require("del");
 //     port: 3000,
 // }
 let connect_options = {
-    root: "./dist",
+    root: "./dist/",
     port: 3000,
     // 自动刷新
     livereload: true,
