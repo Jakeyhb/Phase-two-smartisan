@@ -20,5 +20,33 @@ $("#comonjakeby .hot-list-duct").on("mouseleave", () => {
 $("#comonjakeby .hot-list-duct ").on("click", ".item-cover", () => {
   // console.log(1)
   location.href = "../html/detail.html";
+  // var spu_id = valueByName(location.search, "spu_id");
+  // alert(spu_id)
 
 })
+
+
+// $(".list-duct").on("click", () => {
+//   // console.log(1)
+//   // location.href = "../html/detail.html";
+//   var spu_id = valueByName(location.search, "spu_id");
+//   console.log(spu_id)
+// })
+
+
+function valueByName(search, name) {
+  var start = search.indexOf(name + "=");
+  if (start == -1) {
+    return null;
+  } else {
+    var end = search.indexOf("&", start);
+    if (end == -1) {
+      end = search.length;
+    }
+    //提取出想要键值对 name=value
+    var str = search.substring(start, end);
+    var arr = str.split("=");
+    return arr[1];
+  }
+
+}

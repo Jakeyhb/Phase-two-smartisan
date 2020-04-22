@@ -1,2 +1,0 @@
-"use strict";var hide_timer="";$("#comonjakeby .hot-list-duct ").on("mouseenter",function(){clearTimeout(hide_timer),hide_timer=setTimeout(function(){$(".hot-list-duct").css({background:"#f9f9f9",cursor:"pointer"})},200)}),$("#comonjakeby .hot-list-duct").on("mouseleave",function(){clearTimeout(hide_timer),console.log(1),$(".hot-list-duct").css({background:"#ffffff"})}),$("#comonjakeby .hot-list-duct ").on("click",".item-cover",function(){location.href="../html/detail.html"});
-//# sourceMappingURL=details-6d40d68c3d.js.map

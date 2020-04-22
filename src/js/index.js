@@ -51,18 +51,23 @@ function datalist() {
           // console.log(i)
           // console.log(img_index)
 
-          $(` <div class="list-duct">
+          $(` <div class="list-duct" spu-id="${item.spu.id}">
+          <a href="../html/detail.html?spu_id=${item.spu.id}">
                   <figure class="item-cover">
                     <img
                     data-original="${item.spu.sku_info[0].ali_image}"
                       lazy="loaded"
                     />
                   </figure>
+
+          </a>
                   <article class="artivle">
+                  <a href="../html/detail.html?spu-id="${item.spu.id}">
                     <h3>${item.spu.name}</h3>
                     <h5 class="txt-product-title">
                     ${item.spu.sku_info[0].sub_title}
                     </h5>
+                    </a>
                   </article>
                   <aside class="item-attr-colors"></aside>
                   <!-- 价格 -->
@@ -94,3 +99,5 @@ function datalist() {
 
 
 datalist()
+
+
