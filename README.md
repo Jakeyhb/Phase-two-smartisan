@@ -6,6 +6,9 @@ Two-phase-Project smartisan t.tt
 
 ### dist 文件已经打包，只要在服务器环境下，并且配置了代理；直接可以运行
 
+- 开发运行：npm run dev
+- 打包命令：npm run build
+
 ### 直接拉取项目
 
 - 拉取到本地之后 我们在项目的目录下 先
