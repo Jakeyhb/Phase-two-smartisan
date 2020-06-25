@@ -443,7 +443,6 @@ function hotlist() {
     var options = {
       // http://303z9z3029.qicp.vip/
       url: "http://303z9z3029.qicp.vip/shot_list",
-
       success: render,
       dataType: "json",
 
@@ -685,5 +684,21 @@ dy();
 productlist()
 hotlist();
 
-
+// dy();
+// productlist()
+// hotlist();dy();
+// productlist()
+// hotlist();dy();
+// productlist()
+// hotlist();dy();
+// productlist()
+// hotlist();dy();
+// productlist()
+// hotlist();dy();
+// productlist()
+// hotlist();dy();
+// productlist()
+// hotlist();dy();
+// productlist()
+// hotlist();
 

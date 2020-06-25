@@ -1,11 +1,12 @@
 {
   "activitypage.css": "activitypage-b0720e131a.css",
   "bootstrap.css": "bootstrap-8d90d05140.css",
+  "detial.css": "detial-3718772f60.css",
   "index.css": "index-dfd727c9af.css",
   "indextest.css": "indextest-6377ce7979.css",
   "login.css": "login-c49f29f380.css",
   "pagecar.css": "pagecar-bbab65898c.css",
   "phone.css": "phone-693e4db2c1.css",
-  "public.css": "public-ddc69c5f23.css",
+  "public.css": "public-6cdb8e1f7d.css",
   "swiper.min.css": "swiper-645fe567c3.min.css"
 }

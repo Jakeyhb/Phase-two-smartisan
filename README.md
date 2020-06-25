@@ -17,7 +17,7 @@ Two-phase-Project smartisan t.tt
 
 ### 友情链接：
 
-- 博客地址：http://jakeyhb.github.io/
+- 博客地址：jakeby.top
 
 ## 日志
 
